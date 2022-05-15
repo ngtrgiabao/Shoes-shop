@@ -1,0 +1,32 @@
+@import "../effect/_effect.scss";
+@import "../base/_shoesCard.scss";
+@import "../varibles/_varibles.scss";
+
+.shoes-news {
+    @include flex(center, center);
+    width: 100%;
+    margin-top: 5rem;
+
+    & .shoes-news-body {
+        @include flex(center, center);
+        flex-direction: column;
+        & .shoes-news-title {
+            @include titleProp($product-title-color, $product-title-color);
+        }
+
+        & .title-news {
+            font-weight: 300;
+            font-size: 2rem;
+        }
+    }
+}
+
+.shoes-card {
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    place-items: center;
+    margin: 5rem 0;
+    padding: 0 5rem;
+    @include shoesCard();
+}

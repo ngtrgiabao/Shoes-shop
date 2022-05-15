@@ -1,0 +1,41 @@
+@import "./footerStyles";
+
+.footer {
+    height: 100vh;
+
+    .circles {
+        & .circle-item__purple {
+            width: 15rem;
+            height: 15rem;
+        }
+
+        & .circle-item__pink {
+            width: 50rem;
+            height: 50rem;
+        }
+
+        & .circle-item__green {
+            width: 25rem;
+            height: 25rem;
+        }
+    }
+
+    & .footer-info {
+        & .footer-contain {
+            height: 100%;
+            padding: 2rem;
+
+            & .footer-title {
+                & .logo {
+                    width: 10rem;
+                    height: 10rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

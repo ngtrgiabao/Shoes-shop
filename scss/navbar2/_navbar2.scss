@@ -1,0 +1,60 @@
+.navbar-wrapper {
+    height: 7rem;
+
+    & .navbar-list__left {
+        & .modal {
+            & .navbar-left__menu {
+                display: flex;
+
+                & .navbar-item {
+                    & .navbar-item__prop {
+                        width: 15rem;
+                        max-height: 18rem;
+
+                        & .navbar-item__detail {
+                            width: 100%;
+                            height: 4rem;
+
+                            &:first-child::after {
+                                content: "";
+                                width: 90%;
+                                height: 1px;
+                            }
+                        }
+                    }
+                }
+
+                & .navbar-item-list {
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        height: 3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    & .navbar-list__right {
+        & .navbar-right__contact {
+            & .navbar-search {
+                width: 4.5rem;
+                height: 4.5rem;
+
+                & .search-bar {
+                    width: 100%;
+                    height: 100%;
+
+                    & input {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                &:hover {
+                    width: 30rem;
+                }
+            }
+        }
+    }
+}

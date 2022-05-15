@@ -1,0 +1,104 @@
+@import "../../../effect/_effect.scss";
+@import "../../../varibles/_varibles.scss";
+
+.navbar-wrapper {
+    font-size: 1.7rem;
+    padding: 1rem 1.5rem;
+
+    & .navbar-list__left {
+        display: flex;
+
+        & .navbar-menu {
+            display: none;
+        }
+
+        & .modal {
+            & .navbar-left__menu {
+                display: flex;
+
+                & .navbar-item {
+                    position: relative;
+
+                    &:not(:first-child) {
+                        margin-left: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    & .navbar-list__right {
+        overflow: auto;
+
+        & .navbar-right__contact {
+            display: flex;
+            align-items: center;
+
+            & .navbar-item {
+                font-size: 2rem;
+                position: relative;
+
+                @include underLineEffect(#000);
+            }
+
+            li:nth-child(2) {
+                display: none;
+            }
+
+            & .navbar-item__icon {
+                display: flex;
+                align-items: center;
+                font-size: 2rem;
+            }
+
+            & .navbar-search {
+                @include flex(end, center);
+                border: 1px solid;
+                border-radius: 3rem;
+                overflow: hidden;
+                width: 4rem;
+                height: 4rem;
+                transition: 0.5s;
+
+                & .search-bar {
+                    @include flex(center, center);
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+
+                    & input {
+                        font-size: 1.4rem;
+                        width: 100%;
+                        height: 100%;
+                        padding-left: 1.3rem;
+                        border: none;
+
+                        &,
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+
+                    &:hover input,
+                    &:hover input::placeholder {
+                        color: $contact-logo-color;
+                    }
+
+                    &:hover input::placeholder {
+                        opacity: 0.5;
+                    }
+
+                    & i {
+                        @include flex(center, center);
+                        position: absolute;
+                        right: 1rem;
+                    }
+                }
+
+                &:hover {
+                    width: 15rem;
+                }
+            }
+        }
+    }
+}

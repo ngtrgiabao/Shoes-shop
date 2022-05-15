@@ -1,0 +1,12 @@
+@import "../effect/_effect.scss";
+@import "./feedbackStyles";
+
+.feedback {
+    height: 100vh;
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -1,0 +1,46 @@
+@mixin contact {
+    & .contact {
+        background-color: #fad0c4;
+        background-image: linear-gradient(315deg, #fad0c4 0%, #f1a7f1 74%);
+
+        & .contact-wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(30rem, 1fr));
+            grid-gap: 5rem;
+            padding: 0 5rem;
+            font-size: 2rem;
+            height: 18rem;
+            overflow: auto;
+
+            & .contact-item {
+                @include flex(center, center);
+                flex-direction: column;
+                border-radius: 2rem;
+                width: 30rem;
+                height: 15rem;
+                background: #fff;
+                margin: 1.5rem auto;
+
+                & .contact-logo {
+                    font-size: 3rem;
+                    color: $contact-logo-color;
+                }
+
+                & p {
+                    margin-top: 1rem;
+                    padding: 0 0.5rem;
+                }
+
+                & .title {
+                    font-size: 2.5rem;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+
+                & .description {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}

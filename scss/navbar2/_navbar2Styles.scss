@@ -1,0 +1,164 @@
+@import "../effect/_effect.scss";
+@import "../varibles/_varibles.scss";
+@import "../animation/_fadeIn.scss";
+
+.navbar-wrapper {
+    @include flex(space-between, center);
+    font-size: 2.5rem;
+    padding: 0 3rem;
+    font-weight: bold;
+
+    & .navbar-list__left {
+        display: flex;
+
+        & .navbar-menu {
+            display: none;
+        }
+
+        & .modal {
+            & .navbar-left__menu {
+                display: flex;
+
+                & .navbar-item {
+                    position: relative;
+
+                    @include underLineEffect(#000);
+
+                    &:not(:first-child) {
+                        margin-left: 5rem;
+                    }
+
+                    &:last-child i {
+                        color: red;
+                    }
+
+                    & .navbar-item__prop {
+                        display: none;
+                        flex-direction: column;
+                        justify-content: center;
+                        top: 4.8rem;
+                        left: -1rem;
+                        font-size: 2rem;
+                        font-weight: 300;
+                        overflow: hidden;
+                        border-radius: 1rem;
+                        background-color: white;
+                        box-shadow: 6px 8px 17px 0px rgba(0, 0, 0, 0.212);
+                        animation: fadeIn 0.5s ease;
+                        position: absolute;
+
+                        & .navbar-item__detail {
+                            display: flex;
+                            align-items: center;
+                            margin: 0;
+                            padding: 0 1.5rem;
+                            overflow: hidden;
+                            cursor: pointer;
+
+                            &:first-child::after {
+                                content: "";
+                                left: 0.4rem;
+                                bottom: -1.1rem;
+                                margin: 0 0.4rem;
+                                display: block;
+                                background-color: rgba(0, 0, 0, 0.274);
+                                position: absolute;
+                            }
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+
+                            &:hover {
+                                background-color: #ccc;
+                            }
+                        }
+                    }
+                }
+
+                & .navbar-item-list {
+                    &:hover ul {
+                        display: flex;
+                    }
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
+
+    & .navbar-list__right {
+        & .navbar-right__contact {
+            display: flex;
+            align-items: center;
+
+            & .navbar-item {
+                position: relative;
+                &:not(:last-child) {
+                    margin-right: 3rem;
+                }
+
+                @include underLineEffect(#000);
+            }
+
+            & .navbar-item__icon {
+                display: flex;
+                align-items: center;
+
+                &:not(:last-child) {
+                    margin-right: 3rem;
+                }
+
+                & a {
+                    &:hover i {
+                        transform: scale(1.2);
+                        transition: all 0.3s ease;
+                        color: $icon-hover;
+                    }
+                }
+            }
+
+            & .navbar-search {
+                @include flex(end, center);
+                border: 1px solid;
+                border-radius: 3rem;
+                overflow: hidden;
+                transition: 0.5s;
+
+                & .search-bar {
+                    @include flex(center, center);
+                    position: relative;
+
+                    & input {
+                        font-size: 2.2rem;
+                        padding-left: 1.3rem;
+                        border: none;
+
+                        &,
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+
+                    &:hover input,
+                    &:hover input::placeholder {
+                        color: unset;
+                    }
+
+                    &:hover input::placeholder {
+                        opacity: 0.5;
+                    }
+
+                    & i {
+                        position: absolute;
+                        right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

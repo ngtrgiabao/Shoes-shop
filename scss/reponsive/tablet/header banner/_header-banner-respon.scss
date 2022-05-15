@@ -1,0 +1,13 @@
+.header-banner {
+    & .picture-wrapper {
+        & .shoes-picture__cover {
+            & img {
+                width: 100%;
+            }
+        }
+
+        & .sidebar-picture {
+            display: none;
+        }
+    }
+}

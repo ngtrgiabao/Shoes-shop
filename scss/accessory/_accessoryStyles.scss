@@ -1,0 +1,75 @@
+@import "../effect/_effect.scss";
+@import "../varibles/_varibles.scss";
+
+.accessory-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+
+    & .accessory-gallery {
+        // @include flex(center, center);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 5rem 5rem;
+        border: 1px solid;
+        height: 100%;
+
+        & .accessory-pic {
+            position: relative;
+            overflow: hidden;
+            // margin-bottom: 2rem;
+            border-radius: 2rem;
+
+            & .accessory__img {
+                & img {
+                    transition: all 0.5s;
+                    width: 100%;
+                    height: 100%;
+                    transform: scale(1.1);
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+
+            & .accessory__cate {
+                top: 50%;
+                transform: translateY(-50%);
+                color: #fff;
+                position: absolute;
+
+                & .accessory__text {
+                    @include flex(center, center);
+                    flex-direction: column;
+                    background-color: rgba(0, 0, 0, 0.2);
+                    padding: 1rem;
+
+                    & a {
+                        color: #fff;
+                    }
+
+                    & .accessory__text--title {
+                        & a {
+                            font-size: 4rem;
+                            font-weight: bold;
+                        }
+                    }
+
+                    & .accessory__text--more a {
+                        margin-top: 5rem;
+                        margin-right: 1rem;
+                        font-size: 1.5rem;
+                        text-decoration: underline;
+
+                        &:hover {
+                            color: $product-title-color-hover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

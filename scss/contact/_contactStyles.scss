@@ -1,0 +1,35 @@
+@import "../effect/contact effects/_contactEffect.scss";
+@import "../animation/fly";
+
+.contact-block {
+    margin-top: 5rem;
+    @include contact();
+
+    & .contact {
+        & .contact-wrapper {
+            overflow: auto hidden;
+
+            & .contact-item {
+                & .contact-logo {
+                    animation: fly 2s ease infinite;
+                }
+
+                & .fa-dolly-flatbed {
+                    animation-delay: 1s;
+                }
+
+                & .fa-phone-alt {
+                    animation-delay: 1.5s;
+                }
+
+                & .fa-undo {
+                    animation-delay: 2s;
+                }
+
+                & .fa-gift {
+                    animation-delay: 2.5s;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+.news-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    grid-gap: 2rem;
+    overflow: auto;
+}

@@ -1,0 +1,32 @@
+@mixin dot($color) {
+    &::before {
+        content: "";
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: $color;
+        position: absolute;
+    }
+
+    &::after {
+        content: "";
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: $color;
+        position: absolute;
+    }
+
+    &:hover {
+        color: $product-title-color-hover;
+
+        &:hover::before,
+        &:hover::after {
+            background-color: $product-title-color-hover;
+        }
+    }
+}

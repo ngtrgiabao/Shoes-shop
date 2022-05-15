@@ -1,0 +1,13 @@
+@import "../effect/_effect.scss";
+
+.banner-product {
+    margin: 5rem;
+    @include flex(center, center);
+
+    & a {
+        & img {
+            display: block;
+            object-fit: cover;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import "./accessoryStyles";
+
+.accessory-block {
+    height: 100vh;
+
+    & .accessory-gallery {
+        width: 100%;
+
+        & .accessory-pic-wrapper {
+            height: 100%;
+        }
+    }
+
+    & .accessory-pic {
+        & .accessory__cate {
+            width: 100%;
+
+            & .accessory__text {
+                width: 100%;
+            }
+        }
+    }
+}

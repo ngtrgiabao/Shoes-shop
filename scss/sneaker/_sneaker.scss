@@ -1,0 +1,45 @@
+@import "../varibles/_varibles.scss";
+@import "../effect/_effect.scss";
+
+.sneaker-block {
+    padding: 1px 0;
+    background-color: rgba(204, 204, 204, 0.192);
+
+    & .shoes-news {
+        margin-top: 3.8rem;
+    }
+
+    & .shoes-type-list {
+        font-size: 2rem;
+        height: 6rem;
+        overflow: auto;
+        @include flex(center, center);
+
+        & .list {
+            @include flex(center, center);
+            height: 100%;
+            margin: 0 1rem;
+
+            & .list-item {
+                @include flex(center, center);
+                margin: 0 1.5rem;
+
+                &:first-child {
+                    background-color: $product-title-color-hover;
+                    border-radius: 1.5rem;
+                }
+
+                & a {
+                    @include flex(center, center);
+                    height: 3.5rem;
+                    width: 15rem;
+                    border-radius: 1.5rem;
+
+                    &:hover {
+                        background-color: $product-title-color-hover;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,5 @@
+@import "../effect/see more effects/_seeMoreEffect.scss";
+
+.see-more-block {
+    @include seeMore();
+}

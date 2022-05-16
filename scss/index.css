@@ -209,10 +209,10 @@ a {
   -ms-grid-columns: (minmax(30rem, 1fr))[4];
       grid-template-columns: repeat(4, minmax(30rem, 1fr));
   grid-gap: 5rem;
-  padding: 0 5rem;
   font-size: 2rem;
   height: 18rem;
   overflow: auto;
+  justify-items: center;
 }
 
 .contact-block .contact .contact-wrapper .contact-item {
@@ -394,6 +394,7 @@ a {
   z-index: -9;
   background: linear-gradient(326deg, rgba(95, 10, 135, 0.21), rgba(164, 80, 139, 0.24)), no-repeat url("https://static.nike.com/a/images/w_1920,c_limit/6ca98205-3a29-4635-b884-4f2f33e26ffe/nike-s-best-golf-shoes-for-traction-stability-and-comfort.jpg");
   position: absolute;
+  background-size: cover;
 }
 
 .feedback {
@@ -633,17 +634,27 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+}
+
+.header-banner .picture-wrapper .shoes-picture__cover {
+  width: 70%;
 }
 
 .header-banner .picture-wrapper .shoes-picture__cover img {
-  width: 114rem;
-  height: 50rem;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
+.header-banner .picture-wrapper .sidebar-picture {
+  width: 30%;
+}
+
 .header-banner .picture-wrapper .sidebar-picture img {
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -663,11 +674,11 @@ a {
 .container .hotdeal-card {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   margin-top: 5rem;
   grid-gap: 5rem;
-  padding: 0 5rem;
+  justify-items: center;
 }
 
 .container .hotdeal-card #card {
@@ -1189,10 +1200,10 @@ a {
 .news-container .news .news-wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(40rem, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
-  grid-gap: 1rem;
+  -ms-grid-columns: (minmax(40rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   margin-top: 3rem;
+  justify-items: center;
 }
 
 .news-container .news .news-wrapper .news-card {
@@ -1574,11 +1585,10 @@ ul {
   display: -ms-grid;
   display: grid;
   grid-gap: 5rem;
-  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-  place-items: center;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  justify-items: center;
   margin: 5rem 0;
-  padding: 0 5rem;
 }
 
 .shoes-card #card {

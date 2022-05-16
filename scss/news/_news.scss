@@ -10,9 +10,9 @@
 
         & .news-wrapper {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
-            grid-gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
             margin-top: 3rem;
+            justify-items: center;
 
             & .news-card {
                 margin: 3rem;

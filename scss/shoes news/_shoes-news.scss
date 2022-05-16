@@ -24,9 +24,8 @@
 .shoes-card {
     display: grid;
     grid-gap: 5rem;
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    justify-items: center;
     margin: 5rem 0;
-    padding: 0 5rem;
     @include shoesCard();
 }

@@ -7,10 +7,10 @@
             display: grid;
             grid-template-columns: repeat(4, minmax(30rem, 1fr));
             grid-gap: 5rem;
-            padding: 0 5rem;
             font-size: 2rem;
             height: 18rem;
             overflow: auto;
+            justify-items: center;
 
             & .contact-item {
                 @include flex(center, center);

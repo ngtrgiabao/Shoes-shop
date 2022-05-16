@@ -1,10 +1,10 @@
 .container {
     & .hotdeal-card {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
         margin-top: 5rem;
         grid-gap: 5rem;
-        padding: 0 5rem;
+        justify-items: center;
 
         & #card {
             @include card;

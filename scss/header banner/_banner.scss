@@ -3,16 +3,25 @@
 .header-banner {
     & .picture-wrapper {
         display: flex;
+        width: 100%;
 
-        & .shoes-picture__cover img {
-            width: 114rem;
-            height: 50rem;
-            object-fit: cover;
+        & .shoes-picture__cover {
+            width: 70%;
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
 
-        & .sidebar-picture img {
-            width: 100%;
-            object-fit: cover;
+        & .sidebar-picture {
+            width: 30%;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
     }
 

@@ -5,6 +5,7 @@
         margin-top: 5rem;
         grid-gap: 5rem;
         justify-items: center;
+        padding: 0 3rem;
 
         & #card {
             @include card;

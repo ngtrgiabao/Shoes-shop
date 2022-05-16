@@ -213,6 +213,7 @@ a {
   height: 18rem;
   overflow: auto;
   justify-items: center;
+  padding: 0 3rem;
 }
 
 .contact-block .contact .contact-wrapper .contact-item {
@@ -679,6 +680,7 @@ a {
   margin-top: 5rem;
   grid-gap: 5rem;
   justify-items: center;
+  padding: 0 3rem;
 }
 
 .container .hotdeal-card #card {
@@ -1589,6 +1591,7 @@ ul {
       grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   justify-items: center;
   margin: 5rem 0;
+  padding: 0 3rem;
 }
 
 .shoes-card #card {

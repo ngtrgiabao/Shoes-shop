@@ -8,6 +8,7 @@
         height: 1.5rem;
         background-color: $color;
         position: absolute;
+        transition: all 0.2s ease;
     }
 
     &::after {
@@ -19,6 +20,7 @@
         height: 1.5rem;
         background-color: $color;
         position: absolute;
+        transition: all 0.2s ease;
     }
 
     &:hover {
@@ -27,6 +29,19 @@
         &:hover::before,
         &:hover::after {
             background-color: $product-title-color-hover;
+            height: 1rem;
+        }
+
+        &:hover::before {
+            content: "";
+            left: 1.3rem;
+            position: absolute;
+        }
+
+        &:hover::after {
+            content: "";
+            right: 1.3rem;
+            position: absolute;
         }
     }
 }

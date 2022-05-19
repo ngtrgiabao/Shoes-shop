@@ -1,0 +1,45 @@
+@import "./shoesCardStyles";
+
+@mixin shoesCard {
+    & #card {
+        @include shoesCardStyles();
+
+        & .shoes-card__text {
+            @include shoes-card__text-Styles();
+        }
+
+        & .shoes-card__price {
+            @include shoes-card__price-Styles();
+        }
+
+        & .shoes-card__body {
+            @include shoes-card__body-Styles();
+            height: 9rem;
+
+            & .shoes-card__size {
+                @include shoes-card__size-Styles();
+                & span {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+            }
+
+            & .shoes-card__color {
+                @include shoes-card__color-Styles();
+                & span {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+            }
+
+            & .shoes-card__action {
+                @include shoes-card__action-Styles();
+
+                & button {
+                    height: 4rem;
+                    width: 10rem;
+                }
+            }
+        }
+    }
+}

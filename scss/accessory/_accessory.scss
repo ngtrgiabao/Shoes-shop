@@ -1,22 +1,38 @@
 @import "./accessoryStyles";
 
 .accessory-block {
+    @include accessory-block__Styles();
     height: 100vh;
 
     & .accessory-gallery {
+        @include accessory-gallery__Styles();
         width: 100%;
+        height: 100%;
 
-        & .accessory-pic-wrapper {
-            height: 100%;
-        }
-    }
+        & .accessory-pic {
+            @include accessory-pic__Styles();
 
-    & .accessory-pic {
-        & .accessory__cate {
-            width: 100%;
+            & .accessory-wrapper-2 {
+                @include accessory-wrapper-2__Styles();
+            }
 
-            & .accessory__text {
+            & .accessory__img {
+                @include accessory__img-Styles();
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            & .accessory__cate {
+                @include accessory__cate-Styles();
                 width: 100%;
+
+                & .accessory__text {
+                    @include accessory__text-Styles();
+                    width: 100%;
+                }
             }
         }
     }

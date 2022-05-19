@@ -1,0 +1,146 @@
+@import "../../effect/flex/_flex.scss";
+@import "../../varibles/_varibles.scss";
+@import "../card/_card.scss";
+
+@mixin shoesCardStyles {
+    @include card;
+    background-color: rgba(255, 207, 223, 0.488);
+    background-image: linear-gradient(315deg, #ffcfdf 0%, #b0f3f1 74%);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.467);
+
+    &:hover {
+        cursor: pointer;
+
+        & .shoes-card-img {
+            & img {
+                transform: rotate(-20deg) translateY(-4rem);
+            }
+        }
+
+        & .shoes-card__text,
+        & .shoes-card__price {
+            transform: translate(0);
+        }
+
+        & .shoes-card__body {
+            opacity: 1;
+            transition: all 0.5s;
+            transform: translateY(-3.5rem);
+        }
+    }
+}
+
+@mixin shoes-card__text-Styles {
+    display: inline-block;
+    margin: 0 auto;
+    margin-left: 1.4rem;
+    margin-bottom: 1rem;
+    transform: translate(2.5rem, 7rem);
+    transition: all 0.5s ease;
+}
+
+@mixin shoes-card__price-Styles {
+    display: inline-block;
+    margin-left: 1.4rem;
+    font-size: 2rem;
+    font-weight: bold;
+    transform: translate(6rem, 7rem);
+    transition: all 0.5s ease;
+}
+
+@mixin shoes-card__body-Styles {
+    opacity: 0;
+    margin: 5.3rem 1.4rem 1.5rem;
+    font-size: 1.3rem;
+    transition: 0.5s;
+}
+
+@mixin shoes-card__size-Styles {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    & h3 {
+        margin-right: 1rem;
+        font-weight: 400;
+    }
+
+    & span {
+        @include flex(center, center);
+        font-size: 1.7rem;
+        border-radius: 0.6rem;
+        background-color: #7365c9;
+        color: #fff;
+        transition: 0.25s;
+
+        &:not(:first-child) {
+            margin-left: 1.4rem;
+        }
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+    }
+}
+
+@mixin shoes-card__color-Styles {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+
+    & h3 {
+        font-weight: 400;
+    }
+
+    & span {
+        display: block;
+        border-radius: 50%;
+        transition: 0.25s;
+
+        &:not(:first-child) {
+            margin-left: 1.4rem;
+        }
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+    }
+
+    & .shoes-card__color--green {
+        background-color: rgba(0, 128, 0, 0.712);
+    }
+
+    & .shoes-card__color--red {
+        background-color: rgba(255, 0, 0, 0.712);
+    }
+
+    & .shoes-card__color--gray {
+        background-color: rgba(128, 128, 128, 0.712);
+    }
+}
+
+@mixin shoes-card__action-Styles {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+    & button {
+        font-size: 1.5rem;
+        height: 4rem;
+        width: 10rem;
+        border-radius: 2rem;
+        transition: 0.3s;
+        border: 1px solid transparent;
+        background-color: #fff;
+        box-shadow: 4px 5px 20px rgba(0, 0, 0, 0.467);
+
+        &:hover {
+            transform: scale(1.12);
+            color: white;
+            background-color: $contact-logo-color;
+            cursor: pointer;
+        }
+    }
+}

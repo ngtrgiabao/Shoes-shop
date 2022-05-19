@@ -1,75 +1,78 @@
-@import "../effect/_effect.scss";
+@import "../effect/flex/_flex.scss";
 @import "../varibles/_varibles.scss";
 
-.accessory-block {
-    display: flex;
-    align-items: center;
+@mixin accessory-block__Styles {
+    @include flex(space-around, center);
     flex-direction: column;
-    justify-content: space-around;
+}
 
-    & .accessory-gallery {
-        // @include flex(center, center);
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 5rem 5rem;
-        border: 1px solid;
-        height: 100%;
+@mixin accessory-gallery__Styles {
+    @include flex(center, center);
+    flex-direction: column;
+}
 
-        & .accessory-pic {
-            position: relative;
-            overflow: hidden;
-            // margin-bottom: 2rem;
-            border-radius: 2rem;
+@mixin accessory-pic__Styles {
+    @include flex(center, center);
+    width: 100%;
+    overflow: hidden;
+}
 
-            & .accessory__img {
-                & img {
-                    transition: all 0.5s;
-                    width: 100%;
-                    height: 100%;
-                    transform: scale(1.1);
-                    cursor: pointer;
+@mixin accessory-wrapper-2__Styles {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 5rem;
+}
 
-                    &:hover {
-                        transform: scale(1.2);
-                    }
-                }
-            }
+@mixin accessory__img-Styles {
+    overflow: hidden;
+    border-radius: 1rem;
+    position: relative;
 
-            & .accessory__cate {
-                top: 50%;
-                transform: translateY(-50%);
-                color: #fff;
-                position: absolute;
+    & img {
+        transition: all 0.5s;
+        transform: scale(1.1);
+        cursor: pointer;
 
-                & .accessory__text {
-                    @include flex(center, center);
-                    flex-direction: column;
-                    background-color: rgba(0, 0, 0, 0.2);
-                    padding: 1rem;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
 
-                    & a {
-                        color: #fff;
-                    }
+@mixin accessory__cate-Styles {
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    position: absolute;
+}
 
-                    & .accessory__text--title {
-                        & a {
-                            font-size: 4rem;
-                            font-weight: bold;
-                        }
-                    }
+@mixin accessory__text-Styles {
+    @include flex(center, center);
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
 
-                    & .accessory__text--more a {
-                        margin-top: 5rem;
-                        margin-right: 1rem;
-                        font-size: 1.5rem;
-                        text-decoration: underline;
+    & a {
+        color: #fff;
+    }
 
-                        &:hover {
-                            color: $product-title-color-hover;
-                        }
-                    }
-                }
-            }
+    & .accessory__text--title {
+        & a {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+    }
+
+    & .accessory__text--more a {
+        margin-top: 5rem;
+        margin-right: 1rem;
+        font-size: 1.5rem;
+        text-decoration: underline;
+
+        &:hover {
+            color: $product-title-color-hover;
         }
     }
 }

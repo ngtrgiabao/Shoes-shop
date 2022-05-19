@@ -1,6 +1,7 @@
 @import "./bannerStyles";
 
 .banner-product {
+    @include banner-product__Styles();
     & a {
         width: 100%;
 

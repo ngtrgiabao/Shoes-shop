@@ -1,14 +1,13 @@
 @import "./fonts/fonts";
-@import "accessory/accessory";
+@import "./accessory/accessory";
 
-@import "banner product/banner";
+@import "./banner product/banner";
 
-@import "base/card";
-@import "base/shoesCard";
-@import "base/typography";
+@import "./base/card/card";
+@import "./base/shoesCard/shoesCard";
+@import "./base/typography/typography";
 
 @import "contact/contact";
-@import "./effect/effect";
 
 @import "feedback/feedback";
 

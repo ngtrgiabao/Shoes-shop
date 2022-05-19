@@ -3,6 +3,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -10,32 +12,65 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  height: 100vh;
 }
 
 .accessory-block .accessory-gallery {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 5rem 5rem;
-      grid-template-rows: 5rem 5rem;
-  border: 1px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
   height: 100%;
 }
 
 .accessory-block .accessory-gallery .accessory-pic {
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
   overflow: hidden;
-  border-radius: 2rem;
+}
+
+.accessory-block .accessory-gallery .accessory-pic .accessory-wrapper-2 {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 5rem;
+}
+
+.accessory-block .accessory-gallery .accessory-pic .accessory__img {
+  overflow: hidden;
+  border-radius: 1rem;
+  position: relative;
 }
 
 .accessory-block .accessory-gallery .accessory-pic .accessory__img img {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  width: 100%;
-  height: 100%;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   cursor: pointer;
@@ -46,12 +81,18 @@
           transform: scale(1.2);
 }
 
+.accessory-block .accessory-gallery .accessory-pic .accessory__img img {
+  width: 100%;
+  height: 100%;
+}
+
 .accessory-block .accessory-gallery .accessory-pic .accessory__cate {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   color: #fff;
   position: absolute;
+  width: 100%;
 }
 
 .accessory-block .accessory-gallery .accessory-pic .accessory__cate .accessory__text {
@@ -70,6 +111,7 @@
           flex-direction: column;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 1rem;
+  width: 100%;
 }
 
 .accessory-block .accessory-gallery .accessory-pic .accessory__cate .accessory__text a {
@@ -90,26 +132,6 @@
 
 .accessory-block .accessory-gallery .accessory-pic .accessory__cate .accessory__text .accessory__text--more a:hover {
   color: #fdaa00;
-}
-
-.accessory-block {
-  height: 100vh;
-}
-
-.accessory-block .accessory-gallery {
-  width: 100%;
-}
-
-.accessory-block .accessory-gallery .accessory-pic-wrapper {
-  height: 100%;
-}
-
-.accessory-block .accessory-pic .accessory__cate {
-  width: 100%;
-}
-
-.accessory-block .accessory-pic .accessory__cate .accessory__text {
-  width: 100%;
 }
 
 .banner-product {
@@ -346,6 +368,8 @@ a {
   height: 1.5rem;
   background-color: #fff;
   position: absolute;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .feedback .feedback-header .shoes-news-feedback .shoes-news-contain .shoes-news-title::after {
@@ -358,6 +382,8 @@ a {
   height: 1.5rem;
   background-color: #fff;
   position: absolute;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .feedback .feedback-header .shoes-news-feedback .shoes-news-contain .shoes-news-title:hover {
@@ -366,6 +392,19 @@ a {
 
 .feedback .feedback-header .shoes-news-feedback .shoes-news-contain .shoes-news-title:hover:hover::before, .feedback .feedback-header .shoes-news-feedback .shoes-news-contain .shoes-news-title:hover:hover::after {
   background-color: #fdaa00;
+  height: 1rem;
+}
+
+.feedback .feedback-header .shoes-news-feedback .shoes-news-contain .shoes-news-title:hover:hover::before {
+  content: "";
+  left: 1.3rem;
+  position: absolute;
+}
+
+.feedback .feedback-header .shoes-news-feedback .shoes-news-contain .shoes-news-title:hover:hover::after {
+  content: "";
+  right: 1.3rem;
+  position: absolute;
 }
 
 .feedback .feedback-body {
@@ -636,6 +675,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .header-banner .picture-wrapper .shoes-picture__cover {
@@ -684,6 +724,7 @@ a {
 }
 
 .container .hotdeal-card #card {
+  padding: 1rem;
   border-radius: 2rem;
   background-color: #fce043;
   background-image: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
@@ -691,7 +732,6 @@ a {
           box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.467);
   width: 30rem;
   height: 38rem;
-  padding: 1rem;
 }
 
 .container .hotdeal-card #card .card-header {
@@ -716,12 +756,12 @@ a {
           align-items: center;
   cursor: default;
   border-radius: 2rem;
-  width: 8rem;
-  height: 2.5rem;
   font-size: 1.3rem;
   margin-bottom: 1rem;
   background-color: rgba(255, 255, 0, 0.527);
   z-index: 9;
+  width: 8rem;
+  height: 2.5rem;
 }
 
 .container .hotdeal-card #card i {
@@ -732,20 +772,24 @@ a {
 }
 
 .container .hotdeal-card #card .hotdeal-item__img {
-  width: 20rem;
   display: block;
   margin: -4rem 4rem;
+  width: 20rem;
+  display: block;
 }
 
 .container .hotdeal-card #card .hotdeal-item__img img {
-  width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-transform: rotate(-20deg, -4rem);
           transform: rotate(-20deg, -4rem);
+}
+
+.container .hotdeal-card #card .hotdeal-item__img img {
+  width: 100%;
+  height: 100%;
 }
 
 .container .hotdeal-card #card .hotdeal-item__text {
@@ -1556,6 +1600,8 @@ ul {
   height: 1.5rem;
   background-color: rgba(68, 49, 193, 0.822);
   position: absolute;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .shoes-news .shoes-news-body .shoes-news-title::after {
@@ -1568,6 +1614,8 @@ ul {
   height: 1.5rem;
   background-color: rgba(68, 49, 193, 0.822);
   position: absolute;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .shoes-news .shoes-news-body .shoes-news-title:hover {
@@ -1576,6 +1624,19 @@ ul {
 
 .shoes-news .shoes-news-body .shoes-news-title:hover:hover::before, .shoes-news .shoes-news-body .shoes-news-title:hover:hover::after {
   background-color: #fdaa00;
+  height: 1rem;
+}
+
+.shoes-news .shoes-news-body .shoes-news-title:hover:hover::before {
+  content: "";
+  left: 1.3rem;
+  position: absolute;
+}
+
+.shoes-news .shoes-news-body .shoes-news-title:hover:hover::after {
+  content: "";
+  right: 1.3rem;
+  position: absolute;
 }
 
 .shoes-news .shoes-news-body .title-news {
@@ -1595,6 +1656,7 @@ ul {
 }
 
 .shoes-card #card {
+  padding: 1rem;
   border-radius: 2rem;
   background-color: #fce043;
   background-image: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
@@ -1602,8 +1664,6 @@ ul {
           box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.467);
   width: 30rem;
   height: 38rem;
-  padding: 1rem;
-  height: 42rem;
   background-color: rgba(255, 207, 223, 0.488);
   background-image: linear-gradient(315deg, #ffcfdf 0%, #b0f3f1 74%);
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.467);
@@ -1631,12 +1691,12 @@ ul {
           align-items: center;
   cursor: default;
   border-radius: 2rem;
-  width: 8rem;
-  height: 2.5rem;
   font-size: 1.3rem;
   margin-bottom: 1rem;
   background-color: rgba(255, 255, 0, 0.527);
   z-index: 9;
+  width: 8rem;
+  height: 2.5rem;
 }
 
 .shoes-card #card i {
@@ -1647,20 +1707,24 @@ ul {
 }
 
 .shoes-card #card .hotdeal-item__img {
-  width: 20rem;
   display: block;
   margin: -4rem 4rem;
+  width: 20rem;
+  display: block;
 }
 
 .shoes-card #card .hotdeal-item__img img {
-  width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-transform: rotate(-20deg, -4rem);
           transform: rotate(-20deg, -4rem);
+}
+
+.shoes-card #card .hotdeal-item__img img {
+  width: 100%;
+  height: 100%;
 }
 
 .shoes-card #card .hotdeal-item__text {
@@ -1710,6 +1774,29 @@ ul {
   position: absolute;
 }
 
+.shoes-card #card:hover {
+  cursor: pointer;
+}
+
+.shoes-card #card:hover .shoes-card-img img {
+  -webkit-transform: rotate(-20deg) translateY(-4rem);
+          transform: rotate(-20deg) translateY(-4rem);
+}
+
+.shoes-card #card:hover .shoes-card__text,
+.shoes-card #card:hover .shoes-card__price {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+.shoes-card #card:hover .shoes-card__body {
+  opacity: 1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: translateY(-3.5rem);
+          transform: translateY(-3.5rem);
+}
+
 .shoes-card #card .shoes-card__text {
   display: inline-block;
   margin: 0 auto;
@@ -1734,11 +1821,11 @@ ul {
 
 .shoes-card #card .shoes-card__body {
   opacity: 0;
-  height: 9rem;
-  margin: 9rem 1.4rem 1.5rem;
+  margin: 5.3rem 1.4rem 1.5rem;
   font-size: 1.3rem;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  height: 9rem;
 }
 
 .shoes-card #card .shoes-card__body .shoes-card__size {
@@ -1753,6 +1840,7 @@ ul {
 
 .shoes-card #card .shoes-card__body .shoes-card__size h3 {
   margin-right: 1rem;
+  font-weight: 400;
 }
 
 .shoes-card #card .shoes-card__body .shoes-card__size span {
@@ -1769,8 +1857,6 @@ ul {
   border-radius: 0.6rem;
   background-color: #7365c9;
   color: #fff;
-  width: 2.5rem;
-  height: 2.5rem;
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
@@ -1785,6 +1871,11 @@ ul {
           transform: scale(1.2);
 }
 
+.shoes-card #card .shoes-card__body .shoes-card__size span {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
 .shoes-card #card .shoes-card__body .shoes-card__color {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1795,10 +1886,12 @@ ul {
   margin: 1.5rem 0;
 }
 
+.shoes-card #card .shoes-card__body .shoes-card__color h3 {
+  font-weight: 400;
+}
+
 .shoes-card #card .shoes-card__body .shoes-card__color span {
   display: block;
-  width: 2.5rem;
-  height: 2.5rem;
   border-radius: 50%;
   -webkit-transition: 0.25s;
   transition: 0.25s;
@@ -1826,6 +1919,11 @@ ul {
   background-color: rgba(128, 128, 128, 0.712);
 }
 
+.shoes-card #card .shoes-card__body .shoes-card__color span {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
 .shoes-card #card .shoes-card__body .shoes-card__action {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1833,7 +1931,7 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  cursor: default;
+  cursor: pointer;
 }
 
 .shoes-card #card .shoes-card__body .shoes-card__action button {
@@ -1857,27 +1955,9 @@ ul {
   cursor: pointer;
 }
 
-.shoes-card #card:hover {
-  cursor: pointer;
-}
-
-.shoes-card #card:hover .shoes-card-img img {
-  -webkit-transform: rotate(-20deg) translateY(-4rem);
-          transform: rotate(-20deg) translateY(-4rem);
-}
-
-.shoes-card #card:hover .shoes-card__text,
-.shoes-card #card:hover .shoes-card__price {
-  -webkit-transform: translate(0);
-          transform: translate(0);
-}
-
-.shoes-card #card:hover .shoes-card__body {
-  opacity: 1;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  -webkit-transform: translateY(-3.5rem);
-          transform: translateY(-3.5rem);
+.shoes-card #card .shoes-card__body .shoes-card__action button {
+  height: 4rem;
+  width: 10rem;
 }
 
 .sneaker-block {

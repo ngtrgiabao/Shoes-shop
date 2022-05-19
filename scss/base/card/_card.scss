@@ -1,0 +1,47 @@
+
+@import "./cardStyles";
+
+@mixin card {
+    @include cardStyles();
+    width: 30rem;
+    height: 38rem;
+
+    & .card-header {
+        @include card-header_Styles();
+        padding: 0 0.5rem;
+    }
+
+    & .shoes-card__percent {
+        @include shoes-card__percent-Styles();
+        width: 8rem;
+        height: 2.5rem;
+    }
+
+    & i {
+        @include card_icon-Styles();
+    }
+
+    & .hotdeal-item__img {
+        @include hotdeal-item__img-Styles();
+        width: 20rem;
+        display: block;
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    & .hotdeal-item__text {
+        @include hotdeal-item__text-Styles();
+        margin: 2rem 1rem;
+    }
+
+    & .hotdeal-item__footer {
+        @include hotdeal-item__footer-Styles();
+
+        & .hotdeal-item__cost {
+            @include hotdeal-item__cost-Styles();
+        }
+    }
+}

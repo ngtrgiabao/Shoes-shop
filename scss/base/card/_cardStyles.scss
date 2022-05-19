@@ -1,0 +1,75 @@
+@import "../../effect/flex/_flex.scss";
+
+@mixin cardStyles {
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: #fce043;
+    background-image: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.467);
+}
+
+@mixin card-header_Styles {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin shoes-card__percent-Styles {
+    @include flex(center, center);
+    cursor: default;
+    border-radius: 2rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    background-color: rgba(255, 255, 0, 0.527);
+    z-index: 9;
+}
+
+@mixin card_icon-Styles {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    cursor: default;
+}
+
+@mixin hotdeal-item__img-Styles {
+    display: block;
+    margin: -4rem 4rem;
+
+    & img {
+        object-fit: cover;
+        transition: all 0.5s ease;
+        transform: rotate(-20deg, -4rem);
+    }
+}
+
+@mixin hotdeal-item__text-Styles {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+@mixin hotdeal-item__cost-Styles {
+    display: flex;
+    justify-content: space-between;
+
+    & .hotdeal-item__sale--cost,
+    & .hotdeal-item__primary--cost {
+        & .currency {
+            font-size: 1rem;
+            font-weight: lighter;
+            color: #000;
+        }
+    }
+
+    & .hotdeal-item__sale--cost {
+        color: #a89ea2;
+        position: relative;
+        @include centerLine();
+    }
+}
+
+@mixin hotdeal-item__footer-Styles {
+    color: #000;
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 10.5rem 1rem;
+    align-items: center;
+}

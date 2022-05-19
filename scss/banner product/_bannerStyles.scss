@@ -1,6 +1,6 @@
 @import "../effect/_effect.scss";
 
-.banner-product {
+@mixin banner-product__Styles {
     margin: 5rem;
     @include flex(center, center);
 

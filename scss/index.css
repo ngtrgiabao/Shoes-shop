@@ -1108,10 +1108,10 @@ a {
   border: 1px solid;
   border-radius: 1rem;
   overflow: hidden;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-  -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition-delay: 0.05s;
+          transition-delay: 0.05s;
 }
 
 .form-block .form-wrapper .form-contain .login-form .social-media__login a .fa-facebook {
@@ -1127,10 +1127,13 @@ a {
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  border: 3px solid #2412cc;
 }
 
 .form-block .form-wrapper .form-contain .login-form .social-media__login a {
-  width: 12rem;
+  width: 10rem;
   height: 5rem;
 }
 

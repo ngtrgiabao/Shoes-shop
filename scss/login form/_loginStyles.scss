@@ -133,8 +133,8 @@
         border: 1px solid;
         border-radius: 1rem;
         overflow: hidden;
-        transition: all 0.25s ease;
-        transition-delay: 0.1s;
+        transition: all 0.2s ease-in-out;
+        transition-delay: 0.05s;
 
         & .fa-facebook {
             color: $icon-hover;
@@ -148,6 +148,8 @@
             width: 7rem;
             height: 7rem;
             border-radius: 50%;
+            transform: rotate(360deg);
+            border: 3px solid $icon-hover;
         }
     }
 }

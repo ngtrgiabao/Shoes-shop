@@ -6,7 +6,6 @@
     @include flex(center, center);
     width: 100%;
     margin-top: 5rem;
-
     & .shoes-news-body {
         @include flex(center, center);
         flex-direction: column;
@@ -23,7 +22,7 @@
 
 .shoes-card {
     display: grid;
-    grid-gap: 5rem;
+    grid-gap: 4rem;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     justify-items: center;
     margin: 5rem 0;

@@ -1,14 +1,16 @@
+@import "../base/card/_card.scss";
+
 .container {
     & .hotdeal-card {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
         margin-top: 5rem;
-        grid-gap: 5rem;
+        grid-gap: 4rem;
         justify-items: center;
         padding: 0 3rem;
 
         & #card {
-            @include card;
+            @include card();
             &:hover {
                 cursor: pointer;
 

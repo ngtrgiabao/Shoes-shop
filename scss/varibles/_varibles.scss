@@ -3,3 +3,16 @@ $icon-hover: #2412cc;
 $contact-logo-color: #068ce7;
 $product-title-color: rgba(68, 49, 193, 0.822);
 $product-title-color-hover: #fdaa00;
+$link-color: #2028eb;
+$input-color: linear-gradient(
+    315deg,
+    rgba(158, 143, 178, 0.405) 0%,
+    rgba(167, 172, 217, 0.277) 74%
+);
+$button-color: linear-gradient(
+    315deg,
+    rgba(42, 42, 114, 0.501) 0%,
+    rgba(0, 160, 253, 0.462) 74%
+);
+$button-color-active: linear-gradient(315deg, #9eabe4 0%, #77eed8 74%);
+

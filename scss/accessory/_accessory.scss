@@ -2,6 +2,7 @@
 
 .accessory-block {
     @include accessory-block__Styles();
+    width: 100%;
     height: 100vh;
 
     & .accessory-gallery {

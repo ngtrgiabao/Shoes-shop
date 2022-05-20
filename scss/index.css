@@ -1108,6 +1108,10 @@ a {
   border: 1px solid;
   border-radius: 1rem;
   overflow: hidden;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
 
 .form-block .form-wrapper .form-contain .login-form .social-media__login a .fa-facebook {
@@ -1117,6 +1121,12 @@ a {
 .form-block .form-wrapper .form-contain .login-form .social-media__login a .google-icon {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.form-block .form-wrapper .form-contain .login-form .social-media__login a:hover {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
 }
 
 .form-block .form-wrapper .form-contain .login-form .social-media__login a {

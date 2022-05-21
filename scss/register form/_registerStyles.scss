@@ -1,0 +1,192 @@
+@import "../effect/flex/_flex.scss";
+@import "../varibles/_varibles.scss";
+@import "../animation/fadeIn";
+
+@mixin form-block__Styles {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    animation: fadeIn 0.5s ease;
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+@mixin form-wrapper__Styles {
+    @include flex(center, center);
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    background-color: #fff;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+@mixin form-contain__Styles {
+    @include flex(center, center);
+    padding: 2rem;
+}
+
+@mixin register-form__Styles {
+    @include flex(space-around, null);
+    flex-direction: column;
+    font-size: 2.2rem;
+    padding: 0 5rem;
+}
+
+@mixin register__top-title-Styles {
+    @include flex(null, center);
+    font-size: 1.3rem;
+
+    & p {
+        display: block;
+        margin-right: 1rem;
+        opacity: 0.6;
+    }
+
+    & a {
+        color: $link-color;
+        font-weight: bold;
+
+        &:hover {
+            color: $product-title-color-hover;
+        }
+    }
+}
+
+@mixin register-des__Styles {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+@mixin register-input__block-Styles {
+    @include flex(center, null);
+    flex-direction: column;
+
+    & input {
+        display: block;
+        margin-bottom: 1.8rem;
+        font-size: 1.7rem;
+        padding-left: 2.5rem;
+        border-radius: 1rem;
+        border: none;
+        background-image: $input-color;
+        box-shadow: 6px 7px 0 rgba(0, 0, 0, 0.22);
+        transition: all 0.2s ease-out;
+
+        &:focus {
+            border: 1.5px solid $link-color;
+            transform: scale(1.03);
+        }
+    }
+
+    & button {
+        border-radius: 1rem;
+        border: none;
+        background-image: $button-color;
+        font-size: 2rem;
+        font-weight: bold;
+        box-shadow: 6px 7px 0 rgba(0, 0, 0, 0.22);
+        color: #fff;
+        transition: all 0.2s ease-out;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.04);
+            background-image: $button-color-active;
+        }
+    }
+}
+
+@mixin sub-title__Styles {
+    margin: 0 auto;
+    opacity: 0.4;
+    font-size: 1.5rem;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 5rem;
+        height: 1px;
+        background-color: black;
+        left: -6rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 5rem;
+        height: 1px;
+        background-color: black;
+        right: -6rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@mixin social-media__register-Styles {
+    @include flex(space-between, center);
+    font-size: 3rem;
+
+    & a {
+        @include flex(center, center);
+        border: 1px solid;
+        border-radius: 1rem;
+        overflow: hidden;
+        transition: all 0.2s ease-in-out;
+        transition-delay: 0.05s;
+        box-shadow: 6px 5px 0 rgba(0, 0, 0, 0.277);
+
+        & .fa-facebook {
+            color: $icon-hover;
+        }
+
+        & .google-icon {
+            object-fit: cover;
+        }
+
+        &:hover {
+            border-radius: 50%;
+            transform: rotate(360deg);
+            border: 4px solid $icon-hover;
+        }
+    }
+}
+
+@mixin banner-form__Styles {
+    position: relative;
+    font-size: 2rem;
+
+    & img {
+        object-fit: cover;
+    }
+
+    & a {
+        @include flex(center, center);
+        border: 1px solid;
+        border-radius: 50%;
+        top: 5%;
+        right: 5%;
+        z-index: 90;
+        position: absolute;
+
+        &:hover {
+            border: 3px solid rgba(255, 0, 0, 0.597);
+        }
+    }
+}
+
+.open-form {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}

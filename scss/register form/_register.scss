@@ -1,0 +1,94 @@
+@import "./registerStyles";
+
+.form-block {
+    @include form-block__Styles();
+    width: 100%;
+    height: 100vh;
+
+    & .form-wrapper {
+        @include form-wrapper__Styles();
+        width: 70%;
+        height: 70%;
+
+        & .form-contain {
+            @include form-contain__Styles();
+            width: 50%;
+            height: 100%;
+
+            & .register-form {
+                @include register-form__Styles();
+                width: 100%;
+                height: 100%;
+
+                & .register__top-title {
+                    @include register__top-title-Styles();
+                }
+
+                & .register-title {
+                    & .register-des {
+                        @include register-des__Styles();
+                    }
+                }
+
+                & .register-input__block {
+                    @include register-input__block-Styles();
+                    height: 22rem;
+
+                    & input {
+                        height: 6rem;
+                    }
+
+                    & button {
+                        height: 6rem;
+                    }
+                }
+
+                & .sub-title {
+                    @include sub-title__Styles();
+
+                    &::before {
+                        width: 5rem;
+                        height: 1px;
+                    }
+
+                    &::after {
+                        width: 5rem;
+                        height: 1px;
+                    }
+                }
+
+                & .social-media__register {
+                    @include social-media__register-Styles();
+                    width: 100%;
+                    height: 10%;
+
+                    & a {
+                        width: 7rem;
+                        height: 7rem;
+
+                        & .google-icon {
+                            width: 3rem;
+                            height: 5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        & .banner-form {
+            @include banner-form__Styles();
+            width: 50%;
+            height: 100%;
+
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+
+            & a {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+    }
+}

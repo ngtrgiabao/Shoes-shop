@@ -64,12 +64,38 @@
 
 const user = document.getElementById("user");
 const loginForm = document.getElementById("login");
-const closeForm = document.getElementById("close");
+const registerForm = document.getElementById("register");
+const removeLoginForm = document.querySelector(".close-login-form");
+const removeRegisterForm = document.querySelector(".close-register-form");
+
+const loginLink = document.getElementById("login-link");
+const registerLink = document.getElementById("register-link");
 
 user.addEventListener("click", () => {
-    loginForm.classList.add("open-form");
+    registerForm.classList.add("open-form");
 });
 
-closeForm.addEventListener("click", () => {
+function showLoginForm() {
+    registerForm.classList.remove("open-form");
+    loginForm.classList.add("open-form");
+}
+
+function showRegisterForm() {
     loginForm.classList.remove("open-form");
-});
+    registerForm.classList.add("open-form");
+}
+
+function closeRegisterForm() {
+    registerForm.classList.remove("open-form");
+}
+
+function closeLoginForm() {
+    loginForm.classList.remove("open-form");
+}
+
+removeLoginForm.addEventListener("click", closeLoginForm);
+
+removeRegisterForm.addEventListener("click", closeRegisterForm);
+
+loginLink.addEventListener("click", showLoginForm);
+registerLink.addEventListener("click", showRegisterForm);

@@ -23,13 +23,14 @@
     </head>
 
     <body>
+        <!-- login form START -->
         <div class="form-block" id="login">
             <div class="form-wrapper">
                 <div class="form-contain">
                     <div class="login-form">
                         <div class="login__top-title">
                             <p>Don't have an account?</p>
-                            <a href="#">Register</a>
+                            <a href="#" id="register-link">Register</a>
                         </div>
 
                         <div class="login-title">
@@ -40,15 +41,9 @@
                         </div>
 
                         <div class="login-input__block">
-                            <input
-                                type="email"
-                                placeholder="example@gmail.com"
-                            />
+                            <input type="email" placeholder="Email" />
 
-                            <input
-                                type="text"
-                                placeholder="6+ strong character"
-                            />
+                            <input type="text" placeholder="Password" />
 
                             <button>Login</button>
                         </div>
@@ -77,20 +72,22 @@
                         src="https://cdn.dribbble.com/users/1168847/screenshots/3163803/media/478af9530c77ab765d6d447522f189b5.png?compress=1&resize=800x600&vertical=top"
                         alt=""
                     />
-                    <a href="#" id="close">
+                    <a href="#" class="close-login-form">
                         <i class="fa-solid fa-x"></i>
                     </a>
                 </div>
             </div>
         </div>
+        <!-- login form END -->
 
+        <!-- register form START -->
         <div class="form-block" id="register">
             <div class="form-wrapper">
                 <div class="form-contain">
                     <div class="register-form">
                         <div class="register__top-title">
                             <p>Have an account?</p>
-                            <a href="#">Login</a>
+                            <a href="#" id="login-link">Login</a>
                         </div>
 
                         <div class="register-title">
@@ -103,12 +100,17 @@
                         <div class="register-input__block">
                             <input
                                 type="email"
-                                placeholder="example@gmail.com"
+                                placeholder="Email: example@gmail.com"
                             />
 
                             <input
                                 type="text"
-                                placeholder="6+ strong character"
+                                placeholder="Password: 6+ strong character"
+                            />
+
+                            <input
+                                type="text"
+                                placeholder="Password: 6+ strong character"
                             />
 
                             <button>Register</button>
@@ -116,7 +118,7 @@
 
                         <p class="sub-title">Or register with</p>
 
-                        <div class="social-media__login">
+                        <div class="social-media__register">
                             <a href="#" class="google">
                                 <img
                                     class="google-icon"
@@ -138,12 +140,14 @@
                         src="https://cdn.dribbble.com/users/1168847/screenshots/3163803/media/478af9530c77ab765d6d447522f189b5.png?compress=1&resize=800x600&vertical=top"
                         alt=""
                     />
-                    <a href="#" id="close">
+                    <a href="#" class="close-register-form">
                         <i class="fa-solid fa-x"></i>
                     </a>
                 </div>
             </div>
         </div>
+        <!-- register form START -->
+
         <header class="header">
             <div class="top-bar">
                 <div class="container-header">
@@ -244,7 +248,6 @@
                             <a href="#" id="user">
                                 <i class="far fa-user"></i>
                             </a>
-                            <div class="login-form"></div>
                         </li>
                     </ul>
                 </div>

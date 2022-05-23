@@ -60,7 +60,7 @@
 // leftMenuArrow2.addEventListener("click", showDropDown2);
 // leftMenuArrow3.addEventListener("click", showDropDown3);
 
-"use strict";
+("use strict");
 
 const user = document.getElementById("user");
 const loginForm = document.getElementById("login");
@@ -70,14 +70,16 @@ const removeRegisterForm = document.querySelector(".close-register-form");
 
 const loginLink = document.getElementById("login-link");
 const registerLink = document.getElementById("register-link");
+const formBlocks = document.querySelectorAll(".form-block");
+const formWrapper = document.querySelectorAll(".form-wrapper");
 
-user.addEventListener("click", () => {
+function showForm() {
     registerForm.classList.add("open-form");
-});
+}
 
 function showLoginForm() {
-    registerForm.classList.remove("open-form");
     loginForm.classList.add("open-form");
+    registerForm.classList.remove("open-form");
 }
 
 function showRegisterForm() {
@@ -93,9 +95,23 @@ function closeLoginForm() {
     loginForm.classList.remove("open-form");
 }
 
-removeLoginForm.addEventListener("click", closeLoginForm);
-
-removeRegisterForm.addEventListener("click", closeRegisterForm);
+user.addEventListener("click", showForm);
 
 loginLink.addEventListener("click", showLoginForm);
 registerLink.addEventListener("click", showRegisterForm);
+
+removeLoginForm.addEventListener("click", closeLoginForm);
+removeRegisterForm.addEventListener("click", closeRegisterForm);
+
+formWrapper.forEach((formWrapper) => {
+    formWrapper.onclick = (e) => {
+        e.stopPropagation();
+    };
+});
+
+formBlocks.forEach((formBlock) => {
+    formBlock.onclick = () => {
+        closeRegisterForm();
+        closeLoginForm();
+    };
+});

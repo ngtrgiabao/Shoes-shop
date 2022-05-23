@@ -36,17 +36,28 @@
                         <div class="login-title">
                             <h2>Welcome to Yanji's Shop</h2>
                             <p class="login-des">
-                                Thanks for comeback, I hope you enjoy our shop
+                                Thanks for your comeback, I hope you enjoy our
+                                shop
                             </p>
                         </div>
 
-                        <div class="login-input__block">
-                            <input type="email" placeholder="Email" />
+                        <form action="" class="login-input__block">
+                            <input
+                                type="email"
+                                placeholder="Email:"
+                                required
+                                oninvalid="this.setCustomValidity('Enter correct your email please')"
+                                oninput="this.setCustomValidity('')"
+                            />
 
-                            <input type="text" placeholder="Password" />
+                            <input
+                                type="password"
+                                placeholder="Password:"
+                                required
+                            />
 
-                            <button>Login</button>
-                        </div>
+                            <button>LOGIN</button>
+                        </form>
 
                         <p class="sub-title">Or sigin with</p>
 
@@ -93,28 +104,34 @@
                         <div class="register-title">
                             <h2>Welcome to Yanji's Shop</h2>
                             <p class="register-des">
-                                Thanks for comeback, I hope you enjoy our shop
+                                Thanks for your register, I hope you enjoy our
+                                shop
                             </p>
                         </div>
 
-                        <div class="register-input__block">
+                        <form action="" class="register-input__block">
                             <input
                                 type="email"
                                 placeholder="Email: example@gmail.com"
+                                required
+                                oninvalid="this.setCustomValidity('Enter correct your email please')"
+                                oninput="this.setCustomValidity('')"
                             />
 
                             <input
-                                type="text"
+                                type="password"
                                 placeholder="Password: 6+ strong character"
+                                required
                             />
 
                             <input
-                                type="text"
+                                type="password"
                                 placeholder="Password: 6+ strong character"
+                                required
                             />
 
-                            <button>Register</button>
-                        </div>
+                            <button>REGISTER</button>
+                        </form>
 
                         <p class="sub-title">Or register with</p>
 
@@ -1361,5 +1378,5 @@
             <!-- Footer END -->
         </main>
     </body>
-    <script src="./index.js"></script>
+    <script type="module" src="./js/app.js"></script>
 </html>

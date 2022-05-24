@@ -14,7 +14,6 @@
 @mixin accessory-pic__Styles {
     @include flex(center, center);
     width: 100%;
-    overflow: hidden;
 }
 
 @mixin accessory-wrapper-2__Styles {
@@ -29,6 +28,7 @@
     overflow: hidden;
     border-radius: 1rem;
     position: relative;
+    box-shadow: 1rem 1rem 5px rgba(0, 0, 0, 0.132);
 
     & img {
         transition: all 0.5s;
@@ -42,6 +42,7 @@
 }
 
 @mixin accessory__cate-Styles {
+    width: 100%;
     top: 50%;
     transform: translateY(-50%);
     color: #fff;

@@ -1,0 +1,50 @@
+@import "../varibles/_varibles.scss";
+@import "../effect/_effect.scss";
+
+@mixin sneakerBlockStyles {
+    width: 100%;
+    padding: 1px 0;
+    background-color: rgba(204, 204, 204, 0.192);
+}
+
+@mixin shoesNewsStyles {
+    margin-top: 3.8rem;
+}
+
+@mixin shoesTypeListStyles {
+    font-size: 1.8rem;
+    overflow-x: auto;
+    @include flex(center, center);
+    width: 100%;
+}
+
+@mixin shoesTypesListItemsStyles {
+    & .list {
+        @include flex(center, center);
+        margin: 0 1rem;
+
+        & .list-item {
+            @include flex(center, center);
+            border: 1px solid rgb(204, 204, 204);
+            box-shadow: 6px 5px rgba(0, 0, 0, 0.216);
+            margin: 0 1.5rem;
+            border-radius: 1.5rem;
+            transition: all 0.25s ease;
+
+            & a {
+                @include flex(center, center);
+                transition: all 0.25s ease;
+            }
+
+            &:hover {
+                background-color: $contact-logo-color;
+                border-radius: 1.5rem;
+                transform: scale(1.15);
+
+                & a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

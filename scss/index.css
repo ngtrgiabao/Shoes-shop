@@ -35,6 +35,7 @@
 }
 
 .accessory-block .accessory-gallery .accessory-pic {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,7 +46,6 @@
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  overflow: hidden;
 }
 
 .accessory-block .accessory-gallery .accessory-pic .accessory-wrapper-2 {
@@ -67,6 +67,8 @@
   overflow: hidden;
   border-radius: 1rem;
   position: relative;
+  -webkit-box-shadow: 1rem 1rem 5px rgba(0, 0, 0, 0.132);
+          box-shadow: 1rem 1rem 5px rgba(0, 0, 0, 0.132);
 }
 
 .accessory-block .accessory-gallery .accessory-pic .accessory__img img {
@@ -88,12 +90,12 @@
 }
 
 .accessory-block .accessory-gallery .accessory-pic .accessory__cate {
+  width: 100%;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   color: #fff;
   position: absolute;
-  width: 100%;
 }
 
 .accessory-block .accessory-gallery .accessory-pic .accessory__cate .accessory__text {
@@ -112,7 +114,6 @@
           flex-direction: column;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 1rem;
-  width: 100%;
 }
 
 .accessory-block .accessory-gallery .accessory-pic .accessory__cate .accessory__text a {
@@ -334,6 +335,8 @@ a {
   width: 100%;
   height: 100%;
   background-color: rgba(84, 51, 83, 0.396);
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
   z-index: -4;
   position: absolute;
 }
@@ -638,6 +641,7 @@ a {
 }
 
 .footer {
+  width: 100%;
   height: 100vh;
 }
 
@@ -2005,7 +2009,7 @@ a {
   color: #fdaa00;
 }
 
-@media (min-width: 740px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .feedback-body {
     display: -ms-grid;
     display: grid;
@@ -2184,6 +2188,64 @@ a {
     grid-gap: 2rem;
     overflow: auto;
   }
+  .container .hotdeal-card #card:hover .hotdeal-item__img img {
+    -webkit-transform: rotate(0) translateY(0);
+            transform: rotate(0) translateY(0);
+  }
+  .shoes-card #card {
+    height: 40rem !important;
+  }
+  .shoes-card #card .shoes-card-img img {
+    -webkit-transform: rotate(-20deg) translateY(-4rem);
+            transform: rotate(-20deg) translateY(-4rem);
+  }
+  .shoes-card #card .shoes-card__text,
+  .shoes-card #card .shoes-card__price {
+    -webkit-transform: translate(0) !important;
+            transform: translate(0) !important;
+  }
+  .shoes-card #card .shoes-card__body {
+    opacity: 1 !important;
+    -webkit-transform: translateY(-3.5rem);
+            transform: translateY(-3.5rem);
+  }
+  .shoes-card #card .shoes-card__text {
+    font-size: 1.8rem !important;
+  }
+  .shoes-card #card .shoes-card__price {
+    font-size: 1.6rem !important;
+  }
+  .shoes-card #card .shoes-card__body {
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+  .shoes-card #card .shoes-card__body .shoes-card__size {
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+  .shoes-card #card .shoes-card__body .shoes-card__size span:not(:first-child) {
+    margin-left: 2rem !important;
+  }
+  .shoes-card #card .shoes-card__body .shoes-card__size span {
+    width: 3.4rem !important;
+    height: 3.4rem !important;
+  }
+  .shoes-card #card .shoes-card__body .shoes-card__color {
+    -webkit-transition: none !important;
+    transition: none !important;
+    margin-bottom: 3rem !important;
+  }
+  .shoes-card #card .shoes-card__body .shoes-card__color span:not(:first-child) {
+    margin-left: 2.3rem !important;
+  }
+  .shoes-card #card .shoes-card__body .shoes-card__color span {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  .shoes-card #card .shoes-card__body .shoes-card__action {
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
 }
 
 * {
@@ -2322,6 +2384,7 @@ ul {
   background-color: rgba(255, 207, 223, 0.488);
   background-image: linear-gradient(315deg, #ffcfdf 0%, #b0f3f1 74%);
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.467);
+  overflow: hidden;
 }
 
 .shoes-card #card .card-header {
@@ -2472,6 +2535,7 @@ ul {
           transform: translate(6rem, 7rem);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  opacity: 0.7;
 }
 
 .shoes-card #card .shoes-card__body {
@@ -2511,6 +2575,8 @@ ul {
   font-size: 1.7rem;
   border-radius: 0.6rem;
   background-color: #7365c9;
+  -webkit-box-shadow: 5px 4px 5px rgba(114, 101, 201, 0.633);
+          box-shadow: 5px 4px 5px rgba(114, 101, 201, 0.633);
   color: #fff;
   -webkit-transition: 0.25s;
   transition: 0.25s;
@@ -2553,7 +2619,7 @@ ul {
 }
 
 .shoes-card #card .shoes-card__body .shoes-card__color span:not(:first-child) {
-  margin-left: 1.4rem;
+  margin-left: 1.5rem;
 }
 
 .shoes-card #card .shoes-card__body .shoes-card__color span:hover {
@@ -2564,14 +2630,20 @@ ul {
 
 .shoes-card #card .shoes-card__body .shoes-card__color .shoes-card__color--green {
   background-color: rgba(0, 128, 0, 0.712);
+  -webkit-box-shadow: 5px 3px 3px rgba(0, 128, 0, 0.442);
+          box-shadow: 5px 3px 3px rgba(0, 128, 0, 0.442);
 }
 
 .shoes-card #card .shoes-card__body .shoes-card__color .shoes-card__color--red {
   background-color: rgba(255, 0, 0, 0.712);
+  -webkit-box-shadow: 5px 3px 3px rgba(255, 0, 0, 0.279);
+          box-shadow: 5px 3px 3px rgba(255, 0, 0, 0.279);
 }
 
 .shoes-card #card .shoes-card__body .shoes-card__color .shoes-card__color--gray {
   background-color: rgba(128, 128, 128, 0.712);
+  -webkit-box-shadow: 5px 3px 3px rgba(128, 128, 128, 0.304);
+          box-shadow: 5px 3px 3px rgba(128, 128, 128, 0.304);
 }
 
 .shoes-card #card .shoes-card__body .shoes-card__color span {
@@ -2598,8 +2670,8 @@ ul {
   transition: 0.3s;
   border: 1px solid transparent;
   background-color: #fff;
-  -webkit-box-shadow: 4px 5px 20px rgba(0, 0, 0, 0.467);
-          box-shadow: 4px 5px 20px rgba(0, 0, 0, 0.467);
+  -webkit-box-shadow: 7px 6px 5px rgba(0, 0, 0, 0.253);
+          box-shadow: 7px 6px 5px rgba(0, 0, 0, 0.253);
 }
 
 .shoes-card #card .shoes-card__body .shoes-card__action button:hover {
@@ -2616,6 +2688,7 @@ ul {
 }
 
 .sneaker-block {
+  width: 100%;
   padding: 1px 0;
   background-color: rgba(204, 204, 204, 0.192);
 }
@@ -2625,9 +2698,8 @@ ul {
 }
 
 .sneaker-block .shoes-type-list {
-  font-size: 2rem;
-  height: 6rem;
-  overflow: auto;
+  font-size: 1.8rem;
+  overflow-x: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2637,6 +2709,8 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  height: 6rem;
 }
 
 .sneaker-block .shoes-type-list .list {
@@ -2649,7 +2723,6 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
   margin: 0 1rem;
 }
 
@@ -2663,12 +2736,13 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: 6px 5px rgba(0, 0, 0, 0.216);
+          box-shadow: 6px 5px rgba(0, 0, 0, 0.216);
   margin: 0 1.5rem;
-}
-
-.sneaker-block .shoes-type-list .list .list-item:first-child {
-  background-color: #fdaa00;
   border-radius: 1.5rem;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .sneaker-block .shoes-type-list .list .list-item a {
@@ -2681,13 +2755,29 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 3.5rem;
-  width: 15rem;
-  border-radius: 1.5rem;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 
-.sneaker-block .shoes-type-list .list .list-item a:hover {
-  background-color: #fdaa00;
+.sneaker-block .shoes-type-list .list .list-item:hover {
+  background-color: #068ce7;
+  border-radius: 1.5rem;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.sneaker-block .shoes-type-list .list .list-item:hover a {
+  color: #fff;
+}
+
+.sneaker-block .shoes-type-list .list {
+  height: 100%;
+  margin: 0 1rem;
+}
+
+.sneaker-block .shoes-type-list .list .list-item a {
+  height: 3.5rem;
+  width: 15rem;
 }
 
 .see-more-block {

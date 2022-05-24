@@ -7,6 +7,7 @@
     background-color: rgba(255, 207, 223, 0.488);
     background-image: linear-gradient(315deg, #ffcfdf 0%, #b0f3f1 74%);
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.467);
+    overflow: hidden;
 
     &:hover {
         cursor: pointer;
@@ -46,6 +47,7 @@
     font-weight: bold;
     transform: translate(6rem, 7rem);
     transition: all 0.5s ease;
+    opacity: 0.7;
 }
 
 @mixin shoes-card__body-Styles {
@@ -70,6 +72,7 @@
         font-size: 1.7rem;
         border-radius: 0.6rem;
         background-color: #7365c9;
+        box-shadow: 5px 4px 5px rgba(114, 101, 201, 0.633);
         color: #fff;
         transition: 0.25s;
 
@@ -99,7 +102,7 @@
         transition: 0.25s;
 
         &:not(:first-child) {
-            margin-left: 1.4rem;
+            margin-left: 1.5rem;
         }
 
         &:hover {
@@ -110,14 +113,17 @@
 
     & .shoes-card__color--green {
         background-color: rgba(0, 128, 0, 0.712);
+        box-shadow: 5px 3px 3px rgba(0, 128, 0, 0.442);
     }
 
     & .shoes-card__color--red {
         background-color: rgba(255, 0, 0, 0.712);
+        box-shadow: 5px 3px 3px rgba(255, 0, 0, 0.279);
     }
 
     & .shoes-card__color--gray {
         background-color: rgba(128, 128, 128, 0.712);
+        box-shadow: 5px 3px 3px rgba(128, 128, 128, 0.304);
     }
 }
 
@@ -134,7 +140,7 @@
         transition: 0.3s;
         border: 1px solid transparent;
         background-color: #fff;
-        box-shadow: 4px 5px 20px rgba(0, 0, 0, 0.467);
+        box-shadow: 7px 6px 5px rgba(0, 0, 0, 0.253);
 
         &:hover {
             transform: scale(1.12);

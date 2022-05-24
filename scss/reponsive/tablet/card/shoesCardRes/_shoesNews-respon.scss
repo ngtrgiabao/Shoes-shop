@@ -1,0 +1,5 @@
+@import "_shoesCard-respon.scss";
+
+.shoes-card {
+    @include shoesCardRes();
+}

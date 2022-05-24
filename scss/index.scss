@@ -1,46 +1,27 @@
 @import "./fonts/fonts";
 @import "./accessory/accessory";
-
-@import "./banner product/banner";
-
-@import "./base/card/card";
-@import "./base/shoesCard/shoesCard";
+@import "./bannerProduct/banner";
 @import "./base/typography/typography";
-
-@import "contact/contact";
-
-@import "feedback/feedback";
-
-@import "footer/footer";
-
-@import "header banner/banner";
-
-@import "hotdeal/hotdeal";
-
-@import "./login form/login";
-@import "./register form/register";
-
-@import "margin/margin";
-
-@import "navbar1/navbar1";
-@import "navbar1/navbar1Styles";
-@import "navbar2/navbar2";
-@import "navbar2/navbar2Styles";
-
-@import "news/news";
-
+@import "./contact/contact";
+@import "./feedback/feedback";
+@import "./footer/footer";
+@import "./headerBanner/banner";
+@import "./hotdealCard/hotdealCard";
+@import "./loginForm/login";
+@import "./registerForm/register";
+@import "./margin/margin";
+@import "./navbar1/navbar1";
+@import "./navbar1/navbar1Styles";
+@import "./navbar2/navbar2";
+@import "./navbar2/navbar2Styles";
+@import "./news/news";
 @import "./reponsive/tablet/tablet";
 @import "./reponsive/mobile/mobile";
-
-@import "reset/reset";
-
-@import "shoes news/shoes-news";
-
-@import "sneaker/sneaker";
-
-@import "see more/seeMore";
-
-@import "search bar/searchbar";
+@import "./reset/reset";
+@import "./shoesNews/shoesNews";
+@import "./sneaker/sneaker";
+@import "./seeMore/seeMore";
+@import "./searchbar/searchbar";
 
 iframe {
     width: 100%;

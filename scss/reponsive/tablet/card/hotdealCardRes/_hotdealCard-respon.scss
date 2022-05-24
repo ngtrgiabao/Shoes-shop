@@ -1,0 +1,13 @@
+.container {
+    & .hotdeal-card {
+        & #card {
+            &:hover {
+                & .hotdeal-item__img {
+                    & img {
+                        transform: rotate(0) translateY(0);
+                    }
+                }
+            }
+        }
+    }
+}

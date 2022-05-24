@@ -1,0 +1,41 @@
+@import "_shoesCardStyles-respon.scss";
+@import "../../../../base/shoesCard/_shoesCardStyles.scss";
+
+@mixin shoesCardRes {
+    & #card {
+        @include shoesCardStylesRes();
+
+        & .shoes-card__text {
+            @include shoes-card__text-Styles-res();
+        }
+
+        & .shoes-card__price {
+            @include shoes-card__price-Styles-res();
+        }
+
+        & .shoes-card__body {
+            @include shoes-card__body-Styles-res();
+
+            & .shoes-card__size {
+                @include shoes-card__size-Styles-res();
+                & span {
+                    width: 3.4rem !important;
+                    height: 3.4rem !important;
+                }
+            }
+
+            & .shoes-card__color {
+                @include shoes-card__color-Styles-res();
+
+                & span {
+                    width: 3rem !important;
+                    height: 3rem !important;
+                }
+            }
+
+            & .shoes-card__action {
+                @include shoes-card__action-Styles-res();
+            }
+        }
+    }
+}

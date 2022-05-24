@@ -1,0 +1,56 @@
+@import "_card-respon.scss";
+
+@mixin shoesCardStylesRes {
+    @include cardRes();
+
+    & .shoes-card-img {
+        & img {
+            transform: rotate(-20deg) translateY(-4rem);
+        }
+    }
+
+    & .shoes-card__text,
+    & .shoes-card__price {
+        transform: translate(0) !important;
+    }
+
+    & .shoes-card__body {
+        opacity: 1 !important;
+        transform: translateY(-3.5rem);
+    }
+}
+
+@mixin shoes-card__body-Styles-res {
+    transition: none !important;
+}
+
+@mixin shoes-card__text-Styles-res {
+    font-size: 1.8rem !important;
+}
+
+@mixin shoes-card__price-Styles-res {
+    font-size: 1.6rem !important;
+}
+
+@mixin shoes-card__size-Styles-res {
+    span {
+        &:not(:first-child) {
+            margin-left: 2rem !important;
+        }
+    }
+    transition: none !important;
+}
+
+@mixin shoes-card__color-Styles-res {
+    transition: none !important;
+    margin-bottom: 3rem !important;
+    & span {
+        &:not(:first-child) {
+            margin-left: 2.3rem !important;
+        }
+    }
+}
+
+@mixin shoes-card__action-Styles-res {
+    transition: none !important;
+}

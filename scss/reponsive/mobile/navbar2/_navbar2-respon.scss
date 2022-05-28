@@ -1,0 +1,12 @@
+@import "./navbar2Styles-respon";
+
+.navbar-wrapper {
+    .navbar-list__left {
+        .navbar-menu {
+            top: 2rem;
+            left: 2rem;
+            display: block;
+            position: absolute;
+        }
+    }
+}

@@ -1,52 +1,12 @@
-@import "../effect/_effect.scss";
+@import "../effect/effect";
 
-.feedback {
+@mixin feedbackStyles {
     position: relative;
     padding: 1.5rem 0;
     margin-top: 5rem;
 
-    & .feedback-header {
-        & .shoes-news-feedback {
-            @include flex(center, center);
-            height: 12rem;
-            position: relative;
-
-            &::after {
-                content: "";
-                width: 100%;
-                height: 100%;
-                background-color: rgba(84, 51, 83, 0.396);
-                filter: blur(3px);
-                z-index: -4;
-                position: absolute;
-            }
-
-            & .shoes-news-contain {
-                color: #fff;
-
-                & .shoes-news-title {
-                    @include titleProp(#fff, #fff);
-                }
-            }
-        }
-    }
-
-    & .feedback-body {
-        padding: 0 3.2rem;
-        margin-top: 10rem;
-        overflow: auto;
-        @include flex(space-between, center);
-
-        & .feedback-img-item {
-            & img {
-                border-radius: 3rem;
-                margin: 0 2rem;
-                border: 3px solid #fff;
-            }
-        }
-    }
-
     &::after {
+        height: 100%;
         content: "";
         top: 0;
         z-index: -9;
@@ -59,5 +19,40 @@
                 url("https://static.nike.com/a/images/w_1920,c_limit/6ca98205-3a29-4635-b884-4f2f33e26ffe/nike-s-best-golf-shoes-for-traction-stability-and-comfort.jpg");
         position: absolute;
         background-size: cover;
+    }
+}
+
+@mixin shoesNewsFeedbackStyles {
+    @include flex(center, center);
+    position: relative;
+
+    &::after {
+        content: "";
+        background-color: rgba(84, 51, 83, 0.396);
+        filter: blur(3px);
+        z-index: -4;
+        position: absolute;
+    }
+}
+
+@mixin shoesNewsContainStyles {
+    color: #fff;
+}
+
+@mixin shoesNewsTitleStyles {
+    @include titleProp(#fff, #fff);
+}
+
+@mixin feedbackBodyStyles {
+    margin-top: 10rem;
+    overflow: auto;
+    @include flex(space-around, center);
+}
+
+@mixin feedbackImgItemStyles {
+    & img {
+        border-radius: 3rem;
+        margin: 0 2rem;
+        border: 3px solid #fff;
     }
 }

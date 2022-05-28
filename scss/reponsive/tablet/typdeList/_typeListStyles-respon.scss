@@ -1,0 +1,5 @@
+@mixin typeListStylesRes {
+    & .list-item:first-child {
+        margin-left: 72rem !important;
+    }
+}

@@ -1,6 +1,8 @@
+@import "../flex/_flex.scss";
+@import "../dot effects/_dotEffects.scss";
+
 @mixin titleProp($color, $dotColor) {
-    display: flex;
-    justify-content: center;
+    @include flex(center, null);
     text-transform: uppercase;
     font-weight: bold;
     font-size: 5rem;

@@ -120,6 +120,10 @@
   color: #fff;
 }
 
+.accessory-block .accessory-gallery .accessory-pic .accessory__cate .accessory__text .accessory__text--title {
+  margin-bottom: 1rem;
+}
+
 .accessory-block .accessory-gallery .accessory-pic .accessory__cate .accessory__text .accessory__text--title a {
   font-size: 4rem;
   font-weight: bold;
@@ -281,8 +285,8 @@ a {
   font-size: 1.4rem;
 }
 
-.contact-block .contact .contact-wrapper {
-  overflow: visible hidden;
+.contact-block .contact .contact-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .contact-block .contact .contact-wrapper .contact-item .contact-logo {
@@ -311,12 +315,31 @@ a {
 }
 
 .feedback {
+  width: 100%;
+  height: 100vh;
   position: relative;
   padding: 1.5rem 0;
   margin-top: 5rem;
 }
 
+.feedback::after {
+  height: 100%;
+  content: "";
+  top: 0;
+  z-index: -9;
+  background: linear-gradient(326deg, rgba(95, 10, 135, 0.21), rgba(164, 80, 139, 0.24)), no-repeat url("https://static.nike.com/a/images/w_1920,c_limit/6ca98205-3a29-4635-b884-4f2f33e26ffe/nike-s-best-golf-shoes-for-traction-stability-and-comfort.jpg");
+  position: absolute;
+  background-size: cover;
+}
+
+.feedback::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+
 .feedback .feedback-header .shoes-news-feedback {
+  height: 12rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,19 +349,22 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 12rem;
   position: relative;
+}
+
+.feedback .feedback-header .shoes-news-feedback::after {
+  content: "";
+  background-color: rgba(84, 51, 83, 0.396);
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  z-index: -4;
+  position: absolute;
 }
 
 .feedback .feedback-header .shoes-news-feedback::after {
   content: "";
   width: 100%;
   height: 100%;
-  background-color: rgba(84, 51, 83, 0.396);
-  -webkit-filter: blur(3px);
-          filter: blur(3px);
-  z-index: -4;
-  position: absolute;
 }
 
 .feedback .feedback-header .shoes-news-feedback .shoes-news-contain {
@@ -412,15 +438,13 @@ a {
 }
 
 .feedback .feedback-body {
-  padding: 0 3.2rem;
   margin-top: 10rem;
   overflow: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -432,26 +456,14 @@ a {
   border: 3px solid #fff;
 }
 
-.feedback::after {
-  content: "";
-  top: 0;
-  z-index: -9;
-  background: linear-gradient(326deg, rgba(95, 10, 135, 0.21), rgba(164, 80, 139, 0.24)), no-repeat url("https://static.nike.com/a/images/w_1920,c_limit/6ca98205-3a29-4635-b884-4f2f33e26ffe/nike-s-best-golf-shoes-for-traction-stability-and-comfort.jpg");
-  position: absolute;
-  background-size: cover;
-}
-
-.feedback {
-  height: 100vh;
-}
-
-.feedback::after {
-  content: "";
-  width: 100%;
-  height: 100%;
+.feedback .feedback-body .feedback-img-item img {
+  width: 25rem;
+  height: 25rem;
 }
 
 .footer {
+  width: 100%;
+  height: 100vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(40rem, 1fr))[2];
@@ -459,6 +471,8 @@ a {
   background-color: #abe9cd;
   background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
   color: #fff;
+  margin-top: 5rem;
+  padding: 2rem;
 }
 
 .footer .circles {
@@ -475,8 +489,10 @@ a {
 }
 
 .footer .circles .circle-item__purple {
-  top: 10rem;
-  left: 12rem;
+  width: 15rem;
+  height: 15rem;
+  top: 15rem;
+  left: 16rem;
   border-radius: 50%;
   position: absolute;
   background-color: rgba(128, 83, 172, 0.178);
@@ -484,6 +500,8 @@ a {
 }
 
 .footer .circles .circle-item__pink {
+  width: 50rem;
+  height: 50rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -515,7 +533,9 @@ a {
 }
 
 .footer .circles .circle-item__green {
-  bottom: 4rem;
+  width: 25rem;
+  height: 25rem;
+  bottom: 10rem;
   right: 8rem;
   border-radius: 50%;
   background-color: rgba(31, 209, 249, 0.332);
@@ -523,11 +543,29 @@ a {
   position: absolute;
 }
 
+.footer .footer-info {
+  width: 100%;
+  height: 100%;
+}
+
 .footer .footer-info .footer-contain {
+  width: 100%;
+  height: 100%;
   padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .footer .footer-info .footer-contain .footer-title {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -537,7 +575,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 5rem;
 }
 
 .footer .footer-info .footer-contain .footer-title .logo img {
@@ -548,8 +585,19 @@ a {
 }
 
 .footer .footer-info .footer-contain .footer-title .logo-title {
+  font-size: 5rem;
   margin-left: 2rem;
   font-weight: bold;
+}
+
+.footer .footer-info .footer-contain .footer-title .logo {
+  width: 10rem;
+  height: 10rem;
+}
+
+.footer .footer-info .footer-contain .footer-title .logo img {
+  width: 100%;
+  height: 100%;
 }
 
 .footer .footer-info .footer-contain .footer-desc {
@@ -638,41 +686,6 @@ a {
   margin-left: 2rem;
   font-size: 1.4rem;
   color: #000;
-}
-
-.footer {
-  width: 100%;
-  height: 100vh;
-}
-
-.footer .circles .circle-item__purple {
-  width: 15rem;
-  height: 15rem;
-}
-
-.footer .circles .circle-item__pink {
-  width: 50rem;
-  height: 50rem;
-}
-
-.footer .circles .circle-item__green {
-  width: 25rem;
-  height: 25rem;
-}
-
-.footer .footer-info .footer-contain {
-  height: 100%;
-  padding: 2rem;
-}
-
-.footer .footer-info .footer-contain .footer-title .logo {
-  width: 10rem;
-  height: 10rem;
-}
-
-.footer .footer-info .footer-contain .footer-title .logo img {
-  width: 100%;
-  height: 100%;
 }
 
 .header-banner .picture-wrapper {
@@ -1547,6 +1560,7 @@ a {
 }
 
 .top-bar {
+  width: 100%;
   height: 3.5rem;
 }
 
@@ -1563,57 +1577,6 @@ a {
   color: #fff;
 }
 
-.navbar-wrapper {
-  height: 7rem;
-}
-
-.navbar-wrapper .navbar-list__left .modal .navbar-left__menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.navbar-wrapper .navbar-list__left .modal .navbar-left__menu .navbar-item .navbar-item__prop {
-  width: 15rem;
-  max-height: 18rem;
-}
-
-.navbar-wrapper .navbar-list__left .modal .navbar-left__menu .navbar-item .navbar-item__prop .navbar-item__detail {
-  width: 100%;
-  height: 4rem;
-}
-
-.navbar-wrapper .navbar-list__left .modal .navbar-left__menu .navbar-item .navbar-item__prop .navbar-item__detail:first-child::after {
-  content: "";
-  width: 90%;
-  height: 1px;
-}
-
-.navbar-wrapper .navbar-list__left .modal .navbar-left__menu .navbar-item-list::after {
-  content: "";
-  width: 100%;
-  height: 3rem;
-}
-
-.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search {
-  width: 4.5rem;
-  height: 4.5rem;
-}
-
-.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar {
-  width: 100%;
-  height: 100%;
-}
-
-.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar input {
-  width: 100%;
-  height: 100%;
-}
-
-.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search:hover {
-  width: 30rem;
-}
-
 @keyframes fadeIn {
   from {
     -webkit-transform: translateY(-2.4rem);
@@ -1627,7 +1590,156 @@ a {
   }
 }
 
+.navbar-wrapper .navbar-list__right .navbar-right__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-item {
+  position: relative;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-item:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-item::before {
+  content: "";
+  bottom: -1rem;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-item:hover::before {
+  width: 100%;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-item__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-item__icon:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-item__icon a:hover i {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #2412cc;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid;
+  border-radius: 3rem;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar input {
+  font-size: 2.2rem;
+  padding-left: 1.3rem;
+  border: none;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar input, .navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar input, .navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar input, .navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar input, .navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar input::placeholder {
+  color: transparent;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar:hover input,
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar:hover input::-webkit-input-placeholder {
+  color: unset;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar:hover input,
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar:hover input:-ms-input-placeholder {
+  color: unset;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar:hover input,
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar:hover input::-ms-input-placeholder {
+  color: unset;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar:hover input,
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar:hover input::placeholder {
+  color: unset;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar:hover input::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar:hover input:-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar:hover input::-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar:hover input::placeholder {
+  opacity: 0.5;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar i {
+  position: absolute;
+  right: 1rem;
+}
+
 .navbar-wrapper {
+  height: 7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1709,9 +1821,13 @@ a {
   -webkit-animation: fadeIn 0.5s ease;
           animation: fadeIn 0.5s ease;
   position: absolute;
+  width: 15rem;
+  max-height: 18rem;
 }
 
 .navbar-wrapper .navbar-list__left .modal .navbar-left__menu .navbar-item .navbar-item__prop .navbar-item__detail {
+  width: 100%;
+  height: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1742,6 +1858,12 @@ a {
   background-color: #ccc;
 }
 
+.navbar-wrapper .navbar-list__left .modal .navbar-left__menu .navbar-item .navbar-item__prop .navbar-item__detail:first-child::after {
+  content: "";
+  width: 90%;
+  height: 1px;
+}
+
 .navbar-wrapper .navbar-list__left .modal .navbar-left__menu .navbar-item-list:hover ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1752,6 +1874,44 @@ a {
   content: "";
   display: block;
   position: absolute;
+}
+
+.navbar-wrapper .navbar-list__left .modal .navbar-left__menu .navbar-item-list::after {
+  content: "";
+  width: 100%;
+  height: 3rem;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search .search-bar input {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search:hover {
+  width: 30rem;
+}
+
+@keyframes fadeIn {
+  from {
+    -webkit-transform: translateY(-2.4rem);
+            transform: translateY(-2.4rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .navbar-wrapper .navbar-list__right .navbar-right__contact {
@@ -1903,27 +2063,30 @@ a {
 }
 
 .news-container {
-  padding: 1rem;
-}
-
-.news-container .news {
   width: 100%;
   height: 100vh;
 }
 
+.news-container .news {
+  width: 100%;
+  margin-top: 5rem;
+}
+
 .news-container .news .news-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(40rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-  margin-top: 3rem;
+  -ms-grid-columns: (minmax(40rem, 1fr))[3];
+      grid-template-columns: repeat(3, minmax(40rem, 1fr));
   justify-items: center;
+  padding: 0 2rem;
 }
 
 .news-container .news .news-wrapper .news-card {
   margin: 3rem;
   border-radius: 2rem;
-  overflow: hidden;
   position: relative;
   -webkit-box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.266);
           box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.266);
@@ -1931,10 +2094,13 @@ a {
 }
 
 .news-container .news .news-wrapper .news-card .news-card-header img {
-  width: 100%;
-  height: 100%;
   border-radius: 1.5rem;
   margin-bottom: 1.2rem;
+}
+
+.news-container .news .news-wrapper .news-card .news-card-header img {
+  width: 100%;
+  height: 100%;
 }
 
 .news-container .news .news-wrapper .news-card .news-card-body .news-card-title {
@@ -1987,9 +2153,39 @@ a {
 }
 
 .news-container .news .news-wrapper .news-card .news-card-body .news-card-description {
-  margin-top: 2rem;
-  font-size: 1.6rem;
-  font-weight: 400;
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+.news-container .news .news-wrapper .news-card .news-card-body .news-card-description .news-card__name,
+.news-container .news .news-wrapper .news-card .news-card-body .news-card-description .news-card__date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.news-container .news .news-wrapper .news-card .news-card-body .news-card-description .news-card__name p,
+.news-container .news .news-wrapper .news-card .news-card-body .news-card-description .news-card__date p {
+  margin-left: 0.5rem;
 }
 
 .news-container .news .news-wrapper .news-card .news-card-footer {
@@ -2010,12 +2206,24 @@ a {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .feedback-body {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (minmax(20rem, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    grid-gap: 6rem;
+  .feedback {
+    height: 48rem;
+    padding-top: 0;
+  }
+  .feedback .feedback-header .shoes-news-feedback {
+    margin-top: 0;
+  }
+  .feedback .feedback-body {
+    margin-top: 9rem;
+  }
+  .feedback .feedback-body .feedback-img-item img {
+    border-radius: 3rem;
+    margin: 0 2rem;
+    border: 3px solid #fff;
+  }
+  .feedback .feedback-body .feedback-img-item img {
+    width: 15rem;
+    height: 15rem;
   }
   .header-banner .picture-wrapper .shoes-picture__cover img {
     width: 100%;
@@ -2180,13 +2388,19 @@ a {
   .navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search:hover {
     width: 15rem;
   }
-  .news-wrapper {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (minmax(10rem, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-    grid-gap: 2rem;
+  .news-container {
+    height: 60%;
+  }
+  .news-container .news .news-wrapper {
     overflow: auto;
+    margin-bottom: 5rem;
+  }
+  .news-container .news .news-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  .news-container .news .news-wrapper .news-card .news-card-body .news-card-title a {
+    font-size: 1.5rem;
+    word-break: break-word;
   }
   .container .hotdeal-card #card:hover .hotdeal-item__img img {
     -webkit-transform: rotate(0) translateY(0);
@@ -2194,6 +2408,7 @@ a {
   }
   .shoes-card #card {
     height: 40rem !important;
+    margin-bottom: 2rem;
   }
   .shoes-card #card .shoes-card-img img {
     -webkit-transform: rotate(-20deg) translateY(-4rem);
@@ -2245,6 +2460,108 @@ a {
   .shoes-card #card .shoes-card__body .shoes-card__action {
     -webkit-transition: none !important;
     transition: none !important;
+  }
+  .shoes-type-list .list-item:first-child {
+    margin-left: 72rem !important;
+  }
+  .accessory-block {
+    height: 70%;
+    padding: 0 2rem !important;
+  }
+  .accessory-block .accessory-gallery {
+    height: 100%;
+    width: 100%;
+  }
+  .accessory-block .accessory-gallery .accessory-pic {
+    margin-bottom: 4rem;
+  }
+  .accessory-block .accessory-gallery .accessory-pic .accessory-wrapper-1 {
+    height: 100%;
+  }
+  .accessory-block .accessory-gallery .accessory-pic .accessory-wrapper-1 .accessory__img {
+    height: 100%;
+  }
+  .accessory-block .accessory-gallery .accessory-pic .accessory-wrapper-2 {
+    margin-left: 1.5rem;
+  }
+  .accessory-block .accessory-gallery .accessory-pic .accessory-wrapper-2 .accessory__img:last-child {
+    margin-top: 1.5rem;
+  }
+  .accessory-block .accessory-gallery .accessory-pic .accessory__cate .accessory__text {
+    height: 8rem;
+  }
+  .accessory-block .accessory-gallery .accessory-pic .accessory__cate .accessory__text .accessory__text--title a {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .accessory-block .accessory-gallery .accessory-pic .accessory__cate .accessory__text .accessory__text--more a {
+    font-size: 1.2rem;
+  }
+  .accessory-block .accessory-gallery .accessory-pic .accessory__cate .accessory__text .accessory__text--more a:hover {
+    color: #fdaa00;
+  }
+  .feedback {
+    height: 48rem;
+    padding-top: 0;
+  }
+  .feedback .feedback-header .shoes-news-feedback {
+    margin-top: 0;
+  }
+  .feedback .feedback-body {
+    margin-top: 9rem;
+  }
+  .feedback .feedback-body .feedback-img-item img {
+    border-radius: 3rem;
+    margin: 0 2rem;
+    border: 3px solid #fff;
+  }
+  .feedback .feedback-body .feedback-img-item img {
+    width: 15rem;
+    height: 15rem;
+  }
+  .footer {
+    -ms-grid-columns: (minmax(20rem, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(20rem, 1fr));
+  }
+  .footer .circles .circle-item__purple {
+    width: 8rem;
+    height: 8rem;
+    top: 35rem;
+    left: 4rem;
+    z-index: 1;
+  }
+  .footer .circles .circle-item__pink {
+    width: 30rem;
+    height: 30rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    position: absolute;
+  }
+  .footer .circles .circle-item__pink .circle-text {
+    padding: 2rem;
+  }
+  .footer .circles .circle-item__pink .circle-text .circle-title {
+    font-size: 2rem;
+  }
+  .footer .circles .circle-item__green {
+    width: 10rem;
+    height: 10rem;
+    bottom: 35rem;
+    right: 3rem;
+    position: absolute;
+  }
+  .footer .footer-info .footer-contain .footer-title .logo-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .navbar-wrapper .navbar-list__left .navbar-menu {
+    top: 2rem;
+    left: 2rem;
+    display: block;
+    position: absolute;
   }
 }
 
@@ -2710,10 +3027,13 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  width: 100%;
   height: 6rem;
 }
 
 .sneaker-block .shoes-type-list .list {
+  width: 100%;
+  overflow: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2723,19 +3043,13 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 1rem;
+}
+
+.sneaker-block .shoes-type-list .list::-webkit-scrollbar {
+  display: none;
 }
 
 .sneaker-block .shoes-type-list .list .list-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border: 1px solid #cccccc;
   -webkit-box-shadow: 6px 5px rgba(0, 0, 0, 0.216);
           box-shadow: 6px 5px rgba(0, 0, 0, 0.216);
@@ -2771,13 +3085,14 @@ ul {
 }
 
 .sneaker-block .shoes-type-list .list {
+  width: 100%;
   height: 100%;
   margin: 0 1rem;
 }
 
 .sneaker-block .shoes-type-list .list .list-item a {
-  height: 3.5rem;
   width: 15rem;
+  height: 3.5rem;
 }
 
 .see-more-block {

@@ -1,0 +1,13 @@
+@mixin feedbackStylesRes {
+    padding-top: 0;
+}
+
+@mixin feedbackBodyStylesRes {
+    margin-top: 9rem;
+}
+
+@mixin feedbackImgItemStylesRes {
+    & img {
+        border-radius: 2rem;
+    }
+}

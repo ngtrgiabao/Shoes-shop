@@ -2,91 +2,111 @@
 @import "../varibles/_varibles.scss";
 @import "../animation/_fadeIn.scss";
 
-.navbar-wrapper {
+@mixin navbarWrapperStyles {
     @include flex(space-between, center);
     font-size: 2.5rem;
     padding: 0 3rem;
     font-weight: bold;
     position: relative;
+}
 
-    & .navbar-list__left {
+@mixin navbarListLeftStyles {
+    display: flex;
+}
+
+@mixin navbarMenuStyles {
+    & .navbar-menu {
+        display: none;
+    }
+}
+
+@mixin navbarLeftMenuStyles {
+    display: flex;
+}
+
+@mixin navbarItemStyles {
+    position: relative;
+
+    @include underLineEffect(#000);
+
+    &:not(:first-child) {
+        margin-left: 5rem;
+    }
+
+    &:last-child i {
+        color: red;
+    }
+}
+
+@mixin navbarItemPropStyles {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    top: 4.8rem;
+    left: -1rem;
+    font-size: 2rem;
+    font-weight: 300;
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 6px 8px 17px 0px rgba(0, 0, 0, 0.212);
+    animation: fadeIn 0.5s ease;
+    position: absolute;
+    width: 15rem;
+    max-height: 18rem;
+}
+
+@mixin navbarItemDetailStyles {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0 1.5rem;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:first-child::after {
+        content: "";
+        left: 0.4rem;
+        bottom: -1.1rem;
+        margin: 0 0.4rem;
+        display: block;
+        background-color: rgba(0, 0, 0, 0.274);
+        position: absolute;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        background-color: #ccc;
+    }
+}
+
+@mixin navbarItemListStyles {
+    &:hover ul {
         display: flex;
+    }
 
-        & .navbar-menu {
-            display: none;
-        }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+    }
+}
 
+.navbar-wrapper {
+    & .navbar-list__left {
         & .modal {
             & .navbar-left__menu {
-                display: flex;
-
                 & .navbar-item {
-                    position: relative;
-
-                    @include underLineEffect(#000);
-
-                    &:not(:first-child) {
-                        margin-left: 5rem;
-                    }
-
-                    &:last-child i {
-                        color: red;
-                    }
-
                     & .navbar-item__prop {
-                        display: none;
-                        flex-direction: column;
-                        justify-content: center;
-                        top: 4.8rem;
-                        left: -1rem;
-                        font-size: 2rem;
-                        font-weight: 300;
-                        overflow: hidden;
-                        border-radius: 1rem;
-                        background-color: white;
-                        box-shadow: 6px 8px 17px 0px rgba(0, 0, 0, 0.212);
-                        animation: fadeIn 0.5s ease;
-                        position: absolute;
-
                         & .navbar-item__detail {
-                            display: flex;
-                            align-items: center;
-                            margin: 0;
-                            padding: 0 1.5rem;
-                            overflow: hidden;
-                            cursor: pointer;
-
-                            &:first-child::after {
-                                content: "";
-                                left: 0.4rem;
-                                bottom: -1.1rem;
-                                margin: 0 0.4rem;
-                                display: block;
-                                background-color: rgba(0, 0, 0, 0.274);
-                                position: absolute;
-                            }
-
-                            &:last-child {
-                                margin-bottom: 0;
-                            }
-
-                            &:hover {
-                                background-color: #ccc;
-                            }
                         }
                     }
                 }
 
                 & .navbar-item-list {
-                    &:hover ul {
-                        display: flex;
-                    }
-
-                    &::after {
-                        content: "";
-                        display: block;
-                        position: absolute;
-                    }
                 }
             }
         }

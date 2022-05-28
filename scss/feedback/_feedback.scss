@@ -1,12 +1,47 @@
-@import "../effect/_effect.scss";
 @import "./feedbackStyles";
 
 .feedback {
+    width: 100%;
     height: 100vh;
+    @include feedbackStyles();
 
     &::after {
         content: "";
         width: 100%;
         height: 100%;
+    }
+
+    & .feedback-header {
+        & .shoes-news-feedback {
+            height: 12rem;
+            @include shoesNewsFeedbackStyles();
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+            }
+
+            & .shoes-news-contain {
+                @include shoesNewsContainStyles();
+
+                & .shoes-news-title {
+                    @include shoesNewsTitleStyles();
+                }
+            }
+        }
+    }
+
+    & .feedback-body {
+        @include feedbackBodyStyles();
+
+        & .feedback-img-item {
+            @include feedbackImgItemStyles();
+
+            & img {
+                width: 25rem;
+                height: 25rem;
+            }
+        }
     }
 }

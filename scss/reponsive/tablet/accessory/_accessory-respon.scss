@@ -1,1 +1,34 @@
-@import "./accessoryResStyles";
+@import "_accessory-respon-Styles.scss";
+
+.accessory-block {
+    height: 70%;
+    @include accessoryBlockStylesRes();
+
+    & .accessory-gallery {
+        height: 100%;
+        width: 100%;
+
+        & .accessory-pic {
+            @include accessoryPicStylesRes();
+
+            & .accessory-wrapper-1 {
+                height: 100%;
+
+                & .accessory__img {
+                    height: 100%;
+                }
+            }
+
+            & .accessory-wrapper-2 {
+                @include accessoryWrapper-2StylesRes();
+            }
+
+            & .accessory__cate {
+                & .accessory__text {
+                    height: 8rem;
+                    @include accessoryTextStylesRes();
+                }
+            }
+        }
+    }
+}

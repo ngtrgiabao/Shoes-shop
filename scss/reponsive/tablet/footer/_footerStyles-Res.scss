@@ -1,0 +1,35 @@
+@mixin footerStylesRes {
+    grid-template-columns: repeat(2, minmax(20rem, 1fr));
+}
+
+@mixin purpleCircleStylesRes {
+    top: 35rem;
+    left: 4rem;
+    z-index: 1;
+}
+
+@mixin pinkCircleStylesRes {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+
+    & .circle-text {
+        padding: 2rem;
+
+        & .circle-title {
+            font-size: 2rem;
+        }
+    }
+}
+
+@mixin greenCicleStylesRes {
+    bottom: 35rem;
+    right: 3rem;
+    position: absolute;
+}
+
+@mixin footerTitleStylesRes {
+    & .logo-title {
+        font-size: 3.5rem;
+    }
+}

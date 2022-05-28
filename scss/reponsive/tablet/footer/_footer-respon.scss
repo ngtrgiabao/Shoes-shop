@@ -1,0 +1,33 @@
+@import "./footerStyles-Res";
+
+.footer {
+    @include footerStylesRes();
+
+    .circles {
+        & .circle-item__purple {
+            width: 8rem;
+            height: 8rem;
+            @include purpleCircleStylesRes();
+        }
+
+        & .circle-item__pink {
+            width: 30rem;
+            height: 30rem;
+            @include pinkCircleStylesRes();
+        }
+
+        & .circle-item__green {
+            width: 10rem;
+            height: 10rem;
+            @include greenCicleStylesRes();
+        }
+    }
+
+    & .footer-info {
+        & .footer-contain {
+            & .footer-title {
+                @include footerTitleStylesRes();
+            }
+        }
+    }
+}

@@ -20,11 +20,15 @@
 
 @mixin shoesTypesListItemsStyles {
     & .list {
+        width: 100%;
+        overflow: auto;
         @include flex(center, center);
-        margin: 0 1rem;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
         & .list-item {
-            @include flex(center, center);
             border: 1px solid rgb(204, 204, 204);
             box-shadow: 6px 5px rgba(0, 0, 0, 0.216);
             margin: 0 1.5rem;

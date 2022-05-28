@@ -1,0 +1,34 @@
+@import "../../../effect/flex/_flex.scss";
+
+@mixin accessoryBlockStylesRes {
+    padding: 0 2rem !important;
+}
+
+@mixin accessoryPicStylesRes {
+    margin-bottom: 4rem;
+}
+
+@mixin accessoryWrapper-2StylesRes {
+    margin-left: 1.5rem;
+
+    & .accessory__img:last-child {
+        margin-top: 1.5rem;
+    }
+}
+
+@mixin accessoryTextStylesRes {
+    & .accessory__text--title {
+        & a {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+    }
+
+    & .accessory__text--more a {
+        font-size: 1.2rem;
+
+        &:hover {
+            color: $product-title-color-hover;
+        }
+    }
+}

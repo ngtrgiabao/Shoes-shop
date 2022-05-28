@@ -1,0 +1,15 @@
+@mixin newsWrapperStylesRes {
+    overflow: auto;
+    margin-bottom: 5rem;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@mixin newsCardTitleStylesRes {
+    & a {
+        font-size: 1.5rem;
+        word-break: break-word;
+    }
+}

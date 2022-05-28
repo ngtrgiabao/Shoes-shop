@@ -1,6 +1,18 @@
-.news-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-    grid-gap: 2rem;
-    overflow: auto;
+@import "./newsStyles-respon";
+
+.news-container {
+    height: 60%;
+    & .news {
+        .news-wrapper {
+            @include newsWrapperStylesRes();
+
+            & .news-card {
+                & .news-card-body {
+                    & .news-card-title {
+                        @include newsCardTitleStylesRes();
+                    }
+                }
+            }
+        }
+    }
 }

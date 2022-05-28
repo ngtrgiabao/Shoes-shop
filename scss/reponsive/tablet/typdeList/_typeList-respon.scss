@@ -1,0 +1,5 @@
+@import "./typeListStyles-respon";
+
+.shoes-type-list {
+    @include typeListStylesRes();
+}

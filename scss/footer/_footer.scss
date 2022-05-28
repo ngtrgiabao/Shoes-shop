@@ -3,39 +3,73 @@
 .footer {
     width: 100%;
     height: 100vh;
+    @include footerStyles();
 
     .circles {
+        @include ciclesStyles();
+
         & .circle-item__purple {
             width: 15rem;
             height: 15rem;
+            @include purpleCircleStyles();
         }
 
         & .circle-item__pink {
             width: 50rem;
             height: 50rem;
+            @include pinkCircleStyles();
         }
 
         & .circle-item__green {
             width: 25rem;
             height: 25rem;
+            @include greenCicleStyles();
         }
     }
 
     & .footer-info {
+        width: 100%;
+        height: 100%;
+
         & .footer-contain {
+            width: 100%;
             height: 100%;
-            padding: 2rem;
+            @include footerContainStyles();
 
             & .footer-title {
+                width: 100%;
+
+                @include footerTitleStyles();
+
                 & .logo {
                     width: 10rem;
                     height: 10rem;
 
-                    img {
+                    & img {
                         width: 100%;
                         height: 100%;
                     }
                 }
+            }
+
+            & .footer-desc {
+                @include footerDescStyles();
+            }
+
+            & .footer-cooperate {
+                @include footerCooperateStyles();
+            }
+
+            & .social-links {
+                @include socialLinksStyles();
+
+                & .social-links-item {
+                    @include socialLinksItemStyles();
+                }
+            }
+
+            & .copyright {
+                @include copyrightStyles();
             }
         }
     }

@@ -1,0 +1,80 @@
+@import "../effect/_effect.scss";
+@import "../varibles/_varibles.scss";
+
+@mixin newsStyles {
+    margin-top: 5rem;
+}
+
+@mixin newsWrapperStyles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(40rem, 1fr));
+    justify-items: center;
+    padding: 0 2rem;
+}
+
+@mixin newsCardStyles {
+    margin: 3rem;
+    border-radius: 2rem;
+    position: relative;
+    box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.266);
+    padding: 2rem;
+}
+
+@mixin newsCardHeaderStyles {
+    & img {
+        border-radius: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+}
+
+@mixin newsCardTitleStyles {
+    font-size: 2.2rem;
+    font-weight: bold;
+
+    & a {
+        color: $icon-hover;
+
+        &:hover {
+            color: $product-title-color-hover;
+        }
+    }
+}
+
+@mixin newsCardInfoStyles {
+    margin-top: 1rem;
+    @include flex(center, center);
+    justify-content: space-between;
+    font-size: 1.5rem;
+    opacity: 0.7;
+
+    & .news-card__name,
+    & .news-card__date {
+        @include flex(center, center);
+
+        & p {
+            margin-left: 0.5rem;
+        }
+    }
+}
+
+@mixin newsCardDesStyles {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+@mixin newsCardFooterStyles {
+    font-size: 1.4rem;
+    margin-top: 3rem;
+
+    & a {
+        text-decoration: underline;
+        & i {
+            margin-left: 0.5rem;
+        }
+
+        &:hover {
+            color: $product-title-color-hover;
+        }
+    }
+}

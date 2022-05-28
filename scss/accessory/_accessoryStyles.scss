@@ -18,8 +18,7 @@
 
 @mixin accessory-wrapper-2__Styles {
     height: 100%;
-    display: flex;
-    justify-content: space-between;
+    @include flex(space-between, null);
     flex-direction: column;
     margin-left: 5rem;
 }
@@ -60,6 +59,8 @@
     }
 
     & .accessory__text--title {
+        margin-bottom: 1rem;
+        
         & a {
             font-size: 4rem;
             font-weight: bold;

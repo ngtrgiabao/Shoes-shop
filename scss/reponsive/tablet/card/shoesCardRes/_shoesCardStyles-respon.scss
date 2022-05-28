@@ -2,6 +2,7 @@
 
 @mixin shoesCardStylesRes {
     @include cardRes();
+    margin-bottom: 2rem;
 
     & .shoes-card-img {
         & img {

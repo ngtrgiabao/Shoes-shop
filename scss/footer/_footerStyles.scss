@@ -8,7 +8,6 @@
     background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
     color: #fff;
     margin-top: 5rem;
-    padding: 2rem;
 }
 
 @mixin ciclesStyles {
@@ -17,8 +16,8 @@
 }
 
 @mixin purpleCircleStyles {
-    top: 15rem;
-    left: 16rem;
+    top: 10rem;
+    left: 12rem;
     border-radius: 50%;
     position: absolute;
     background-color: rgba(128, 83, 172, 0.178);
@@ -55,8 +54,8 @@
 }
 
 @mixin greenCicleStyles {
-    bottom: 10rem;
-    right: 8rem;
+    bottom: 4rem;
+    right: 3rem;
     border-radius: 50%;
     background-color: rgba(31, 209, 249, 0.332);
     background-image: linear-gradient(
@@ -69,7 +68,6 @@
 }
 
 @mixin footerContainStyles {
-    padding: 2rem;
     @include flex(center, null);
     flex-direction: column;
 }
@@ -146,7 +144,7 @@
 
 @mixin copyrightStyles {
     @include flex(center, center);
-    margin-top: 7rem;
+    margin-top: 4rem;
     margin-left: 2rem;
     font-size: 1.4rem;
     color: #000;

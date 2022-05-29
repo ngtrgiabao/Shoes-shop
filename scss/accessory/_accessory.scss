@@ -5,6 +5,7 @@
     @include accessory-block__Styles();
     width: 100%;
     height: 100vh;
+    display: none !important;
 
     & .accessory-gallery {
         @include accessory-gallery__Styles();

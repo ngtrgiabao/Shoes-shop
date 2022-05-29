@@ -14,6 +14,7 @@
           flex-direction: column;
   width: 100%;
   height: 100vh;
+  display: none !important;
 }
 
 .accessory-block .accessory-gallery {
@@ -317,6 +318,7 @@ a {
 .feedback {
   width: 100%;
   height: 100vh;
+  display: none !important;
   position: relative;
   padding: 1.5rem 0;
   margin-top: 5rem;
@@ -462,6 +464,7 @@ a {
 }
 
 .footer {
+  display: none !important;
   width: 100%;
   height: 100vh;
   display: -ms-grid;
@@ -717,6 +720,8 @@ a {
 }
 
 .header-banner .hotdeal-banner {
+  width: 100%;
+  display: none !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1880,6 +1885,10 @@ a {
   height: 3rem;
 }
 
+.navbar-wrapper .navbar-list__right {
+  display: none;
+}
+
 .navbar-wrapper .navbar-list__right .navbar-right__contact .navbar-search {
   width: 4.5rem;
   height: 4.5rem;
@@ -2061,6 +2070,7 @@ a {
 }
 
 .news-container {
+  display: none !important;
   width: 100%;
   height: 100vh;
 }
@@ -2555,11 +2565,77 @@ a {
 }
 
 @media screen and (max-width: 740px) {
+  .navbar-wrapper .navbar-list__left {
+    width: 100%;
+    height: 100vh;
+  }
   .navbar-wrapper .navbar-list__left .navbar-menu {
-    top: 2rem;
+    top: 5.3rem;
     left: 2rem;
     display: block;
     position: absolute;
+  }
+  .navbar-wrapper .navbar-list__left .modal .navbar-left__menu {
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2rem;
+    padding: 0 1rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0 2rem 2rem 0;
+    -webkit-box-shadow: 5px 4px 5px rgba(0, 0, 0, 0.437);
+            box-shadow: 5px 4px 5px rgba(0, 0, 0, 0.437);
+    z-index: 999;
+  }
+  .navbar-wrapper .navbar-list__left .modal .navbar-left__menu a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 8rem;
+  }
+  .navbar-wrapper .navbar-list__left .modal .navbar-left__menu .navbar-item-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+  .navbar-wrapper .navbar-list__left .modal .navbar-left__menu .navbar-item-list:not(:first-child) {
+    margin-left: 0;
+    border-top: 1px solid #ccc;
+  }
+  .navbar-wrapper .navbar-list__right .navbar-right__contact {
+    font-size: 2rem;
   }
 }
 
@@ -3003,6 +3079,7 @@ ul {
 }
 
 .sneaker-block {
+  display: none !important;
   width: 100%;
   padding: 1px 0;
   background-color: rgba(204, 204, 204, 0.192);

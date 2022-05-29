@@ -27,6 +27,8 @@
     }
 
     & .hotdeal-banner {
+        width: 100%;
+        display: none !important;
         @include flex(center, center);
     }
 }

@@ -1,3 +1,39 @@
-@mixin navbarWrapperStylesRes {
-  font-size: 2rem !important;
+@import "../../../effect/flex/_flex.scss";
+
+@mixin navbarMenuStylesRes {
+    top: 5.3rem;
+    left: 2rem;
+    display: block;
+    position: absolute;
+}
+
+@mixin navbarLeftMenuStylesRes {
+    @include flex(center, center);
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2rem;
+    padding: 0 1rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0 2rem 2rem 0;
+    box-shadow: 5px 4px 5px rgba(0, 0, 0, 0.437);
+    z-index: 999;
+
+    & a {
+        @include flex(center, center);
+        height: 8rem;
+    }
+}
+
+@mixin navbarItemStylesRes {
+    @include flex(space-between, center);
+    flex-direction: row;
+    width: 100%;
+
+    &:not(:first-child) {
+        margin-left: 0;
+        border-top: 1px solid #ccc;
+    }
 }

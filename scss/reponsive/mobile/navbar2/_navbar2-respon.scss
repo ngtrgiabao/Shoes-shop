@@ -14,8 +14,16 @@
                 width: 70%;
                 @include navbarLeftMenuStylesRes();
 
-                & .navbar-item-list {
+                & .navbar-item {
                     @include navbarItemStylesRes();
+
+                    & .navbar-item__prop {
+                        @include navbarItemPropsStylesRes();
+                    }
+                }
+
+                & .navbar-item-list {
+                    @include navbarItemListStylesRes();
                 }
             }
         }
@@ -26,4 +34,8 @@
             font-size: 2rem;
         }
     }
+}
+
+.close-props-menu {
+    display: flex !important;
 }

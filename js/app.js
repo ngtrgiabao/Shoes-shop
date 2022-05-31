@@ -62,7 +62,7 @@
 
 ("use strict");
 
-const user = document.getElementById("user");
+const userIcon = document.getElementById("user");
 const loginForm = document.getElementById("login");
 const registerForm = document.getElementById("register");
 const removeLoginForm = document.querySelector(".close-login-form");
@@ -72,6 +72,12 @@ const loginLink = document.getElementById("login-link");
 const registerLink = document.getElementById("register-link");
 const formBlocks = document.querySelectorAll(".form-block");
 const formWrapper = document.querySelectorAll(".form-wrapper");
+
+const navbarItemList1 = document.querySelector(".js-navbar-list-1");
+const navbarItemList2 = document.querySelector(".js-navbar-list-2");
+const navbarItemList3 = document.querySelector(".js-navbar-list-3");
+const navbarItemProps = document.querySelector(".navbar-item__prop");
+const closenavbarItemProps = document.getElementById("close-props-menu");
 
 function showForm() {
     registerForm.classList.add("open-form");
@@ -95,23 +101,46 @@ function closeLoginForm() {
     loginForm.classList.remove("open-form");
 }
 
-user.addEventListener("click", showForm);
+userIcon.addEventListener("click", showForm);
 
+// Open login & register form
 loginLink.addEventListener("click", showLoginForm);
 registerLink.addEventListener("click", showRegisterForm);
 
+// Close login & register form
 removeLoginForm.addEventListener("click", closeLoginForm);
 removeRegisterForm.addEventListener("click", closeRegisterForm);
 
+// Fix issue close form by click in form
 formWrapper.forEach((formWrapper) => {
     formWrapper.onclick = (e) => {
         e.stopPropagation();
     };
 });
 
+// Close form by click out the form
 formBlocks.forEach((formBlock) => {
     formBlock.onclick = () => {
         closeRegisterForm();
         closeLoginForm();
     };
 });
+
+function showPropMenu1() {
+    navbarItemList1.classList.toggle("mb-80");
+    navbarItemProps.classList.toggle("close-props-menu");
+}
+
+function showPropMenu2() {
+    navbarItemList2.classList.toggle("mb-80");
+}
+
+function showPropMenu3() {
+    navbarItemList3.classList.toggle("mb-80");
+}
+
+// Show props menu of navbar2
+navbarItemList1.addEventListener("click", showPropMenu1);
+navbarItemList2.addEventListener("click", showPropMenu2);
+navbarItemList3.addEventListener("click", showPropMenu3);
+

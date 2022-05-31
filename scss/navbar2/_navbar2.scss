@@ -1,12 +1,18 @@
 @import "./navbar2Styles";
+@import "../effect/flex/_flex.scss";
 
 .navbar-wrapper {
+    width: 100%;
     height: 7rem;
     @include navbarWrapperStyles();
+    @include flex(space-between, null);
 
     & .navbar-list__left {
         @include navbarListLeftStyles();
         @include navbarMenuStyles();
+        @include flex(null, center);
+        width: 100%;
+        height: 100%;
 
         & .modal {
             & .navbar-left__menu {
@@ -45,8 +51,15 @@
     }
 
     & .navbar-list__right {
-        display: none;
+        // display: none;
+        width: 100%;
+        height: 100%;
+
         & .navbar-right__contact {
+            @include flex(end, null);
+            width: 100%;
+            height: 100%;
+
             & .navbar-search {
                 width: 4.5rem;
                 height: 4.5rem;

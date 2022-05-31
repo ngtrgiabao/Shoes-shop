@@ -1,0 +1,90 @@
+@import "../../../effect/_effect.scss";
+@import "../../../varibles/_varibles.scss";
+
+@mixin navbarWrapperStylesRes {
+    font-size: 1.7rem;
+    padding: 1rem 1.5rem;
+}
+
+@mixin navbarListLeftStylesRes {
+    display: flex;
+}
+
+@mixin navbarMenuStylesRes {
+    display: none;
+}
+
+@mixin navbarLeftMenuStylesRes {
+    display: flex;
+}
+
+@mixin leftNavbarItemStylesRes {
+    position: relative;
+
+    &:not(:first-child) {
+        margin-left: 2rem;
+    }
+}
+
+@mixin navbarListRightStylesRes {
+    overflow: auto;
+}
+
+@mixin navbarRightContactStylesRes {
+    @include flex(null, center);
+
+    li:nth-child(2) {
+        display: none;
+    }
+}
+
+@mixin rightNavbarItemStylesRes {
+    font-size: 2rem;
+    position: relative;
+
+    @include underLineEffect(#000);
+}
+
+@mixin rightNavbarItemIconStylesRes {
+    @include flex(null, center);
+    font-size: 2rem;
+}
+
+@mixin rightNavbarSearchStylesRes {
+    @include flex(end, center);
+    border: 1px solid;
+    border-radius: 3rem;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+@mixin rightSearchBarStylesRes {
+    @include flex(center, center);
+    position: relative;
+
+    & input {
+        font-size: 1.4rem;
+        padding-left: 1.3rem;
+        border: none;
+
+        &,
+        &::placeholder {
+            color: transparent;
+        }
+    }
+
+    &:hover input,
+    &:hover input::placeholder {
+        color: $contact-logo-color;
+    }
+
+    &:hover input::placeholder {
+        opacity: 0.5;
+    }
+
+    & i {
+        @include flex(center, center);
+        position: absolute;
+        right: 1rem;
+    }
+}

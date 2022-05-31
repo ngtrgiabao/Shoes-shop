@@ -1,4 +1,5 @@
 @import "../../../effect/flex/_flex.scss";
+@import "../../../effect/underline effects/_underLineEffect.scss";
 
 @mixin navbarMenuStylesRes {
     top: 5.3rem;
@@ -29,11 +30,32 @@
 
 @mixin navbarItemStylesRes {
     @include flex(space-between, center);
+    @include underLineEffect(transparent);
     flex-direction: row;
     width: 100%;
+    height: 6rem;
 
     &:not(:first-child) {
         margin-left: 0;
         border-top: 1px solid #ccc;
     }
+
+    & .navbar-item__prop {
+        display: none !important;
+    }
+}
+
+@mixin navbarItemListStylesRes {
+    &:hover ul {
+        display: none;
+    }
+}
+
+@mixin navbarItemPropsStylesRes {
+    top: 6rem;
+    left: 0rem;
+    width: 100%;
+    border-radius: unset;
+    position: absolute;
+    background-color: green;
 }

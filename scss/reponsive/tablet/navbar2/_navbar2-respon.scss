@@ -1,97 +1,53 @@
-@import "../../../effect/_effect.scss";
-@import "../../../varibles/_varibles.scss";
+@import "./navbar2Styles-respon";
 
 .navbar-wrapper {
-    font-size: 1.7rem;
-    padding: 1rem 1.5rem;
+    @include navbarWrapperStylesRes();
 
     & .navbar-list__left {
-        display: flex;
+        @include navbarListLeftStylesRes();
 
         & .navbar-menu {
-            display: none;
+            @include navbarMenuStylesRes();
         }
 
         & .modal {
             & .navbar-left__menu {
-                display: flex;
+                @include navbarLeftMenuStylesRes();
 
                 & .navbar-item {
-                    position: relative;
-
-                    &:not(:first-child) {
-                        margin-left: 2rem;
-                    }
+                    @include leftNavbarItemStylesRes();
                 }
             }
         }
     }
 
     & .navbar-list__right {
-        overflow: auto;
+        @include navbarListRightStylesRes();
 
         & .navbar-right__contact {
-            display: flex;
-            align-items: center;
+            @include navbarRightContactStylesRes();
 
             & .navbar-item {
-                font-size: 2rem;
-                position: relative;
-
-                @include underLineEffect(#000);
-            }
-
-            li:nth-child(2) {
-                display: none;
+                @include rightNavbarItemStylesRes();
             }
 
             & .navbar-item__icon {
-                display: flex;
-                align-items: center;
-                font-size: 2rem;
+                @include rightNavbarItemIconStylesRes();
             }
 
             & .navbar-search {
-                @include flex(end, center);
-                border: 1px solid;
-                border-radius: 3rem;
-                overflow: hidden;
+                @include rightNavbarSearchStylesRes();
                 width: 4rem;
                 height: 4rem;
-                transition: 0.5s;
 
                 & .search-bar {
-                    @include flex(center, center);
+                    @include rightSearchBarStylesRes();
                     width: 100%;
                     height: 100%;
-                    position: relative;
 
                     & input {
-                        font-size: 1.4rem;
                         width: 100%;
                         height: 100%;
-                        padding-left: 1.3rem;
-                        border: none;
-
-                        &,
-                        &::placeholder {
-                            color: transparent;
-                        }
-                    }
-
-                    &:hover input,
-                    &:hover input::placeholder {
-                        color: $contact-logo-color;
-                    }
-
-                    &:hover input::placeholder {
-                        opacity: 0.5;
-                    }
-
-                    & i {
-                        @include flex(center, center);
-                        position: absolute;
-                        right: 1rem;
                     }
                 }
 

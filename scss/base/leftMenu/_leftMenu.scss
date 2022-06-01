@@ -1,0 +1,48 @@
+@import "./leftMenuStyles";
+@import "../../animation/showLeftMenu";
+
+.navbar-wrapper {
+    padding-right: 2rem;
+
+    & .navbar-list__left {
+        & .navbar-menu {
+            @include navbarMenuStylesRes();
+        }
+
+        & .exit-icon {
+            display: unset;
+        }
+
+        & .modal {
+            & .navbar-left__menu {
+                width: 70%;
+                @include navbarLeftMenuStylesRes();
+                animation: showLeftMenu 0.5s ease;
+
+                & .navbar-item {
+                    @include navbarItemStylesRes();
+                    width: 100%;
+                    height: 6rem;
+
+                    & .navbar-item__prop {
+                        @include navbarItemPropsStylesRes();
+                    }
+                }
+            }
+        }
+    }
+
+    & .navbar-list__right {
+        & .navbar-right__contact {
+            @include navbarRightMenuStylesRes();
+        }
+    }
+}
+
+.open-props-menu {
+    display: flex !important;
+}
+
+.open-left-menu {
+    display: flex !important;
+}

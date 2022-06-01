@@ -90,6 +90,11 @@ const closeMenu = document.querySelector(".exit-icon");
 // Open left menu
 function openLeftMenu() {
     navbarLeftMenu.classList.add("open-left-menu");
+
+    // Set display for menu props to none
+    navbarItemProps.forEach((navbarItemProp) => {
+        navbarItemProp.style.display = "none";
+    });
 }
 
 // Close left menu
@@ -149,9 +154,9 @@ formBlocks.forEach((formBlock) => {
 });
 
 // Set display for menu props to none
-navbarItemProps.forEach((navbarItemProp) => {
-    navbarItemProp.style.display = "none";
-});
+// navbarItemProps.forEach((navbarItemProp) => {
+//     navbarItemProp.style.display = "none";
+// });
 
 // Show menu props
 function showPropMenu1() {

@@ -11,7 +11,7 @@
 }
 
 @mixin navbarListLeftStyles {
-    display: flex;
+    @include flex(start, center);
 }
 
 @mixin navbarMenuStyles {
@@ -21,7 +21,7 @@
 }
 
 @mixin navbarLeftMenuStyles {
-    display: flex;
+    @include flex(center, center);
 }
 
 @mixin navbarItemStyles {
@@ -29,7 +29,7 @@
 
     @include underLineEffect(#000);
 
-    &:not(:first-child) {
+    &:not(:nth-child(2)) {
         margin-left: 5rem;
     }
 
@@ -98,7 +98,7 @@
 }
 
 @mixin navbarRightContactStyles {
-    @include flex(null, center);
+    @include flex(end, center);
 
     & .navbar-item {
         position: relative;

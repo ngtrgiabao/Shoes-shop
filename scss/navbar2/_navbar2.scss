@@ -2,17 +2,20 @@
 @import "../effect/flex/_flex.scss";
 
 .navbar-wrapper {
-    width: 100%;
+    max-width: 100%;
     height: 7rem;
     @include navbarWrapperStyles();
-    @include flex(space-between, null);
 
     & .navbar-list__left {
         @include navbarListLeftStyles();
         @include navbarMenuStyles();
-        @include flex(null, center);
+
         width: 100%;
         height: 100%;
+
+        & .exit-icon {
+            display: none;
+        }
 
         & .modal {
             & .navbar-left__menu {

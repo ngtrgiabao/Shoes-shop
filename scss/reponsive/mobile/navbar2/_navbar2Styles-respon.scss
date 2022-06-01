@@ -2,14 +2,14 @@
 @import "../../../effect/underline effects/_underLineEffect.scss";
 
 @mixin navbarMenuStylesRes {
-    top: 5.3rem;
+    top: 2.3rem;
     left: 2rem;
     display: block;
     position: absolute;
 }
 
 @mixin navbarLeftMenuStylesRes {
-    @include flex(center, center);
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 0;
@@ -26,36 +26,49 @@
         @include flex(center, center);
         height: 8rem;
     }
+
+    & .exit-icon {
+        @include flex(center, center);
+        width: 3rem;
+        height: 3rem;
+        top: 1.2rem;
+        right: 0.5rem;
+        color: red;
+        border: 2px solid rgba(0, 0, 0, 0.43);
+        border-radius: 50%;
+        z-index: 999;
+        position: absolute;
+    }
 }
 
 @mixin navbarItemStylesRes {
     @include flex(space-between, center);
     @include underLineEffect(transparent);
     flex-direction: row;
-    width: 100%;
-    height: 6rem;
 
     &:not(:first-child) {
         margin-left: 0;
         border-top: 1px solid #ccc;
     }
 
-    & .navbar-item__prop {
-        display: none !important;
+    &:nth-child(2) {
+        margin-top: 5rem;
     }
-}
 
-@mixin navbarItemListStylesRes {
-    &:hover ul {
-        display: none;
+    &:last-child {
+        & .fire-icon {
+            display: flex;
+            margin-left: 1rem;
+        }
     }
 }
 
 @mixin navbarItemPropsStylesRes {
-    top: 6rem;
+    top: 5rem;
     left: 0rem;
     width: 100%;
+    height: 8rem;
     border-radius: unset;
     position: absolute;
-    background-color: green;
+    box-shadow: 0 0 0;
 }

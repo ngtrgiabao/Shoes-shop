@@ -69,20 +69,45 @@ const removeLoginForm = document.querySelector(".close-login-form");
 const removeRegisterForm = document.querySelector(".close-register-form");
 
 const loginLink = document.getElementById("login-link");
-const registerLink = document.getElementById("register-link");
 const formBlocks = document.querySelectorAll(".form-block");
+const registerLink = document.getElementById("register-link");
 const formWrapper = document.querySelectorAll(".form-wrapper");
 
 const navbarItemList1 = document.querySelector(".js-navbar-list-1");
 const navbarItemList2 = document.querySelector(".js-navbar-list-2");
 const navbarItemList3 = document.querySelector(".js-navbar-list-3");
-const navbarItemProps = document.querySelector(".navbar-item__prop");
-const closenavbarItemProps = document.getElementById("close-props-menu");
 
+const navbarItemProp1 = document.querySelector(".navbar-item__prop-1");
+const navbarItemProp2 = document.querySelector(".navbar-item__prop-2");
+const navbarItemProp3 = document.querySelector(".navbar-item__prop-3");
+const navbarItemProps = document.querySelectorAll(".navbar-item__prop");
+const closenavbarItemProps = document.querySelector(".open-props-menu");
+
+const openMenu = document.querySelector(".js-left-menu");
+const navbarLeftMenu = document.querySelector(".navbar-left__menu");
+const closeMenu = document.querySelector(".exit-icon");
+
+// Open left menu
+function openLeftMenu() {
+    navbarLeftMenu.classList.add("open-left-menu");
+}
+
+// Close left menu
+function closeLeftMenu() {
+    navbarLeftMenu.classList.remove("open-left-menu");
+}
+
+openMenu.onclick = () => openLeftMenu();
+closeMenu.onclick = () => closeLeftMenu();
+
+// Show form while click user icon
 function showForm() {
     registerForm.classList.add("open-form");
 }
 
+userIcon.addEventListener("click", showForm);
+
+// Open login & register form
 function showLoginForm() {
     loginForm.classList.add("open-form");
     registerForm.classList.remove("open-form");
@@ -93,6 +118,10 @@ function showRegisterForm() {
     registerForm.classList.add("open-form");
 }
 
+loginLink.addEventListener("click", showLoginForm);
+registerLink.addEventListener("click", showRegisterForm);
+
+// Close login or register form
 function closeRegisterForm() {
     registerForm.classList.remove("open-form");
 }
@@ -101,13 +130,6 @@ function closeLoginForm() {
     loginForm.classList.remove("open-form");
 }
 
-userIcon.addEventListener("click", showForm);
-
-// Open login & register form
-loginLink.addEventListener("click", showLoginForm);
-registerLink.addEventListener("click", showRegisterForm);
-
-// Close login & register form
 removeLoginForm.addEventListener("click", closeLoginForm);
 removeRegisterForm.addEventListener("click", closeRegisterForm);
 
@@ -126,21 +148,37 @@ formBlocks.forEach((formBlock) => {
     };
 });
 
+// Set display for menu props to none
+navbarItemProps.forEach((navbarItemProp) => {
+    navbarItemProp.style.display = "none";
+});
+
+// Show menu props
 function showPropMenu1() {
     navbarItemList1.classList.toggle("mb-80");
-    navbarItemProps.classList.toggle("close-props-menu");
+    navbarItemProp1.classList.toggle("open-props-menu");
+    navbarItemProp1.onclick = (e) => {
+        e.stopPropagation();
+    };
 }
 
 function showPropMenu2() {
     navbarItemList2.classList.toggle("mb-80");
+    navbarItemProp2.classList.toggle("open-props-menu");
+    navbarItemProp2.onclick = (e) => {
+        e.stopPropagation();
+    };
 }
 
 function showPropMenu3() {
     navbarItemList3.classList.toggle("mb-80");
+    navbarItemProp3.classList.toggle("open-props-menu");
+    navbarItemProp3.onclick = (e) => {
+        e.stopPropagation();
+    };
 }
 
-// Show props menu of navbar2
+// Show props menu of navbar2 while click
 navbarItemList1.addEventListener("click", showPropMenu1);
 navbarItemList2.addEventListener("click", showPropMenu2);
 navbarItemList3.addEventListener("click", showPropMenu3);
-

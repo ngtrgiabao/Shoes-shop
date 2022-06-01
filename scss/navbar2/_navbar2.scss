@@ -40,6 +40,7 @@
 
                 & .navbar-item-list {
                     @include navbarItemListStyles();
+
                     &::after {
                         content: "";
                         width: 100%;
@@ -51,18 +52,19 @@
     }
 
     & .navbar-list__right {
-        // display: none;
         width: 100%;
         height: 100%;
 
         & .navbar-right__contact {
-            @include flex(end, null);
+            @include navbarRightContactStyles();
             width: 100%;
             height: 100%;
 
             & .navbar-search {
                 width: 4.5rem;
                 height: 4.5rem;
+
+                @include navbarSearchStyles();
 
                 & .search-bar {
                     width: 100%;

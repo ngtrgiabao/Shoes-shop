@@ -84,8 +84,10 @@
 }
 
 @mixin navbarItemListStyles {
-    &:hover ul {
-        display: flex;
+    &:hover {
+        & .navbar-item__prop {
+            display: flex;
+        }
     }
 
     &::after {
@@ -95,91 +97,69 @@
     }
 }
 
-.navbar-wrapper {
-    & .navbar-list__left {
-        & .modal {
-            & .navbar-left__menu {
-                & .navbar-item {
-                    & .navbar-item__prop {
-                        & .navbar-item__detail {
-                        }
-                    }
-                }
+@mixin navbarRightContactStyles {
+    @include flex(null, center);
 
-                & .navbar-item-list {
-                }
+    & .navbar-item {
+        position: relative;
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+
+        @include underLineEffect(#000);
+    }
+
+    & .navbar-item__icon {
+        @include flex(null, center);
+
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+
+        & a {
+            &:hover i {
+                transform: scale(1.2);
+                transition: all 0.3s ease;
+                color: $icon-hover;
             }
         }
     }
+}
 
-    & .navbar-list__right {
-        & .navbar-right__contact {
-            display: flex;
-            align-items: center;
+@mixin navbarSearchStyles {
+    @include flex(end, center);
+    border: 1px solid;
+    border-radius: 3rem;
+    overflow: hidden;
+    transition: 0.5s;
 
-            & .navbar-item {
-                position: relative;
-                &:not(:last-child) {
-                    margin-right: 3rem;
-                }
+    & .search-bar {
+        @include flex(center, center);
+        position: relative;
 
-                @include underLineEffect(#000);
+        & input {
+            font-size: 2.2rem;
+            padding-left: 1.3rem;
+            border: none;
+
+            &,
+            &::placeholder {
+                color: transparent;
             }
+        }
 
-            & .navbar-item__icon {
-                display: flex;
-                align-items: center;
+        &:hover input,
+        &:hover input::placeholder {
+            color: unset;
+        }
 
-                &:not(:last-child) {
-                    margin-right: 3rem;
-                }
+        &:hover input::placeholder {
+            opacity: 0.5;
+        }
 
-                & a {
-                    &:hover i {
-                        transform: scale(1.2);
-                        transition: all 0.3s ease;
-                        color: $icon-hover;
-                    }
-                }
-            }
-
-            & .navbar-search {
-                @include flex(end, center);
-                border: 1px solid;
-                border-radius: 3rem;
-                overflow: hidden;
-                transition: 0.5s;
-
-                & .search-bar {
-                    @include flex(center, center);
-                    position: relative;
-
-                    & input {
-                        font-size: 2.2rem;
-                        padding-left: 1.3rem;
-                        border: none;
-
-                        &,
-                        &::placeholder {
-                            color: transparent;
-                        }
-                    }
-
-                    &:hover input,
-                    &:hover input::placeholder {
-                        color: unset;
-                    }
-
-                    &:hover input::placeholder {
-                        opacity: 0.5;
-                    }
-
-                    & i {
-                        position: absolute;
-                        right: 1rem;
-                    }
-                }
-            }
+        & i {
+            position: absolute;
+            right: 1rem;
         }
     }
 }

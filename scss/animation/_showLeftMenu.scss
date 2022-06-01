@@ -1,0 +1,10 @@
+@keyframes showLeftMenu {
+    from {
+        transform: translateX(-2.4rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -2,7 +2,7 @@
 @import "../../../../base/shoesCard/_shoesCardStyles.scss";
 
 @mixin shoesCardRes {
-    & #card {
+    & .card {
         @include shoesCardStylesRes();
 
         & .shoes-card__text {

@@ -1,0 +1,33 @@
+@import "./cardStylesRes";
+
+@mixin cardRes {
+    min-width: 18rem;
+    height: 24rem;
+    @include cardStylesRes();
+
+    & .card-header {
+        @include cardHeaderStylesRes();
+    }
+
+    & .hotdeal-item__img {
+        width: 11rem;
+        height: 11rem;
+        @include hotdealItemImgStylesRes();
+    }
+
+    & .hotdeal-item__text {
+        @include hotdealItemTextStylesRes();
+    }
+
+    & .hotdeal-item__footer {
+        margin: 0;
+        width: 100%;
+        @include hotdealItemfooterStylesRes();
+
+        & .hotdeal-item__cost {
+            @include hotdealItemCostStylesRes();
+
+            
+        }
+    }
+}

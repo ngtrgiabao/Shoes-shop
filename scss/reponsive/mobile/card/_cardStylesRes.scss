@@ -1,0 +1,48 @@
+@mixin cardStylesRes {
+    position: relative;
+}
+
+@mixin cardHeaderStylesRes {
+    padding: 0;
+}
+
+@mixin hotdealItemImgStylesRes {
+    position: absolute;
+    left: -0.9rem;
+}
+
+@mixin hotdealItemTextStylesRes {
+    font-size: 1rem;
+    top: 8rem;
+    margin: 0 1rem;
+    left: auto;
+    right: auto;
+    padding: 0;
+    position: relative;
+}
+
+@mixin hotdealItemfooterStylesRes {
+    top: 14.5rem;
+    position: relative;
+}
+
+@mixin hotdealItemCostStylesRes {
+    @include flex(space-between, null);
+
+    & .hotdeal-item__sale--cost,
+    & .hotdeal-item__primary--cost {
+        font-size: 1rem;
+        display: flex;
+        flex-direction: row;
+
+        & span {
+            display: block;
+        }
+
+        & .currency {
+            font-size: 0.5rem;
+            font-weight: lighter;
+            color: #000;
+        }
+    }
+}

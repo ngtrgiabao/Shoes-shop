@@ -40,7 +40,7 @@
 }
 
 @mixin shoesNewsTitleStyles {
-    @include titleProp(#fff, #fff);
+    @include titleProp(#fff, #fff, 5rem);
 }
 
 @mixin feedbackBodyStyles {

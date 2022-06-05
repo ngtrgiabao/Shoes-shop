@@ -9,7 +9,7 @@
         justify-items: center;
         padding: 0 3rem;
 
-        & #card {
+        & .card {
             @include card();
             &:hover {
                 cursor: pointer;

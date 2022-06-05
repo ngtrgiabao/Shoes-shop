@@ -23,7 +23,6 @@
     & .hotdeal-item__img {
         @include hotdeal-item__img-Styles();
         width: 20rem;
-        display: block;
 
         & img {
             width: 100%;
@@ -33,7 +32,7 @@
 
     & .hotdeal-item__text {
         @include hotdeal-item__text-Styles();
-        margin: 2rem 1rem;
+        width: 100%;
     }
 
     & .hotdeal-item__footer {

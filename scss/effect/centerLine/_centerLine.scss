@@ -1,11 +1,12 @@
-@mixin centerLine {
+@mixin centerLine($color) {
     &::after {
         content: "";
         width: 100%;
         height: 1.5px;
         top: 50%;
         left: 0;
-        background-color: red;
+        transform: translateY(-50%);
+        background-color: $color;
         position: absolute;
     }
 }

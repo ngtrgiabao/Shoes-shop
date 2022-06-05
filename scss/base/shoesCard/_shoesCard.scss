@@ -1,7 +1,7 @@
 @import "./shoesCardStyles";
 
 @mixin shoesCard {
-    & #card {
+    & .card {
         @include shoesCardStyles();
 
         & .shoes-card__text {

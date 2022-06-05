@@ -1,0 +1,13 @@
+@import "../../../effect/titleprop effects/_titlepropEffect.scss";
+
+.shoes-news {
+    & .shoes-news-body {
+        #responsive-styles {
+            @include titleProp(
+                $product-title-color,
+                $product-title-color,
+                3rem
+            );
+        }
+    }
+}

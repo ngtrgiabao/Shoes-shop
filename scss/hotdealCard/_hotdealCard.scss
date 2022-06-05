@@ -8,6 +8,7 @@
         grid-gap: 4rem;
         justify-items: center;
         padding: 0 3rem;
+        overflow: hidden;
 
         & .card {
             @include card();

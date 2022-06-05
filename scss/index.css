@@ -873,15 +873,12 @@ a {
   cursor: pointer;
 }
 
-.container .hotdeal-card .card:hover .hotdeal-item__img {
-  z-index: 999;
-}
-
 .container .hotdeal-card .card:hover .hotdeal-item__img img {
   -webkit-transform: rotate(-20deg) translateY(-4rem);
           transform: rotate(-20deg) translateY(-4rem);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  z-index: 999;
 }
 
 @-webkit-keyframes fadeIn {

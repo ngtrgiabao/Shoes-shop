@@ -223,10 +223,6 @@ a {
   }
 }
 
-.contact-block {
-  margin-top: 5rem;
-}
-
 .contact-block .contact {
   background-color: #fad0c4;
   background-image: linear-gradient(315deg, #fad0c4 0%, #f1a7f1 74%);
@@ -756,6 +752,7 @@ a {
   background-image: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
   -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.467);
           box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.467);
+  margin-bottom: 5rem;
   width: 30rem;
   height: 38rem;
 }
@@ -2644,9 +2641,9 @@ a {
     display: none;
   }
   .container .hotdeal-card .card {
+    overflow: hidden;
     min-width: 18rem;
     height: 24rem;
-    position: relative;
     position: relative;
   }
   .container .hotdeal-card .card .card-header {
@@ -2760,6 +2757,110 @@ a {
     content: "";
     right: 1.3rem;
     position: absolute;
+  }
+  #shoes-card-responsive-styles {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: auto;
+  }
+  #shoes-card-responsive-styles::-webkit-scrollbar {
+    display: none;
+  }
+  #shoes-card-responsive-styles .shoes-card__item {
+    overflow: hidden;
+    min-width: 18rem;
+    height: 24rem;
+    position: relative;
+  }
+  #shoes-card-responsive-styles .shoes-card__item .card-header {
+    padding: 0;
+  }
+  #shoes-card-responsive-styles .shoes-card__item .hotdeal-item__img {
+    width: 11rem;
+    height: 11rem;
+    position: absolute;
+    left: -0.9rem;
+  }
+  #shoes-card-responsive-styles .shoes-card__item .hotdeal-item__text {
+    font-size: 1rem;
+    top: 8rem;
+    margin: 0 1rem;
+    left: auto;
+    right: auto;
+    padding: 0;
+    position: relative;
+  }
+  #shoes-card-responsive-styles .shoes-card__item .hotdeal-item__footer {
+    margin: 0;
+    width: 100%;
+    top: 14.5rem;
+    position: relative;
+  }
+  #shoes-card-responsive-styles .shoes-card__item .hotdeal-item__footer .hotdeal-item__cost {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #shoes-card-responsive-styles .shoes-card__item .hotdeal-item__footer .hotdeal-item__cost .hotdeal-item__sale--cost,
+  #shoes-card-responsive-styles .shoes-card__item .hotdeal-item__footer .hotdeal-item__cost .hotdeal-item__primary--cost {
+    font-size: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #shoes-card-responsive-styles .shoes-card__item .hotdeal-item__footer .hotdeal-item__cost .hotdeal-item__sale--cost span,
+  #shoes-card-responsive-styles .shoes-card__item .hotdeal-item__footer .hotdeal-item__cost .hotdeal-item__primary--cost span {
+    display: block;
+  }
+  #shoes-card-responsive-styles .shoes-card__item .hotdeal-item__footer .hotdeal-item__cost .hotdeal-item__sale--cost .currency,
+  #shoes-card-responsive-styles .shoes-card__item .hotdeal-item__footer .hotdeal-item__cost .hotdeal-item__primary--cost .currency {
+    font-size: 0.5rem;
+    font-weight: lighter;
+    color: #000;
+  }
+  #shoes-card-responsive-styles .shoes-card__item:hover .shoes-card__price {
+    margin-left: 0.3rem !important;
+    margin-top: 3rem;
+  }
+  #shoes-card-responsive-styles .shoes-card__item:hover .shoes-card__text {
+    font-size: 1rem;
+    top: 1rem;
+    margin: 0 1rem;
+    left: -0.7rem;
+    right: auto;
+    padding: 0;
+    position: relative;
+  }
+  #shoes-card-responsive-styles .shoes-card__item:hover .shoes-card__body {
+    margin: 5.5rem 0 1.5rem;
+  }
+  #shoes-card-responsive-styles .shoes-card__item .shoes-card__price {
+    margin-left: -1.5rem;
+    font-size: 1rem;
+  }
+  #shoes-card-responsive-styles .shoes-card__item .shoes-card__text {
+    margin: 0;
+  }
+  #shoes-card-responsive-styles .shoes-card__item .shoes-card__body {
+    margin: 7rem 0 1.5rem;
+    font-size: 1rem;
+  }
+  #shoes-card-responsive-styles .shoes-card__item .shoes-card__body span {
+    min-width: 1.8rem;
+    min-height: 1.8rem;
+  }
+  #shoes-card-responsive-styles .shoes-card__item .shoes-card__body .shoes-card__action button {
+    height: 2.8rem;
+    width: 6.8rem;
+    font-size: 1.2rem;
   }
   .contact-block {
     margin-top: 3rem !important;
@@ -2899,6 +3000,7 @@ ul {
   background-image: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
   -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.467);
           box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.467);
+  margin-bottom: 5rem;
   width: 30rem;
   height: 38rem;
   background-color: rgba(255, 207, 223, 0.488);
@@ -3107,7 +3209,7 @@ ul {
   transition: 0.25s;
 }
 
-.shoes-card .card .shoes-card__body .shoes-card__size span:not(:first-child) {
+.shoes-card .card .shoes-card__body .shoes-card__size span:not(:nth-child(2)) {
   margin-left: 1.4rem;
 }
 
@@ -3141,10 +3243,11 @@ ul {
   border-radius: 50%;
   -webkit-transition: 0.25s;
   transition: 0.25s;
+  margin-left: 2rem;
 }
 
-.shoes-card .card .shoes-card__body .shoes-card__color span:not(:first-child) {
-  margin-left: 1.5rem;
+.shoes-card .card .shoes-card__body .shoes-card__color span:not(:nth-child(2)) {
+  margin-left: 1.6rem;
 }
 
 .shoes-card .card .shoes-card__body .shoes-card__color span:hover {

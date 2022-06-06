@@ -1,6 +1,7 @@
 @import "./cardStylesRes";
 
 @mixin cardRes {
+    overflow: hidden;
     min-width: 18rem;
     height: 24rem;
     @include cardStylesRes();

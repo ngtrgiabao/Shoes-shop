@@ -76,7 +76,7 @@
         color: #fff;
         transition: 0.25s;
 
-        &:not(:first-child) {
+        &:not(:nth-child(2)) {
             margin-left: 1.4rem;
         }
 
@@ -100,9 +100,10 @@
         display: block;
         border-radius: 50%;
         transition: 0.25s;
+        margin-left: 2rem;
 
-        &:not(:first-child) {
-            margin-left: 1.5rem;
+        &:not(:nth-child(2)) {
+            margin-left: 1.6rem;
         }
 
         &:hover {

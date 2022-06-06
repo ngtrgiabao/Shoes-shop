@@ -3,18 +3,10 @@
 
 .container {
     .hotdeal-card {
-        &::-webkit-scrollbar {
-            display: none;
-        }
-
-        overflow: auto;
-        display: flex !important;
-        padding: 3rem;
-        margin: 0;
+        @include hotdealCardStylesRes();
 
         & .card {
             @include cardRes();
-            position: relative;
         }
     }
 }

@@ -1,4 +1,5 @@
 @import "../../../effect/titleprop effects/_titlepropEffect.scss";
+@import "../card/_cardRes.scss";
 
 .shoes-news {
     & .shoes-news-body {
@@ -8,6 +9,65 @@
                 $product-title-color,
                 3rem
             );
+        }
+    }
+}
+
+#shoes-card-responsive-styles {
+    display: flex;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    & .shoes-card__item {
+        @include cardRes();
+
+        &:hover {
+            & .shoes-card__price {
+                margin-left: 0.3rem !important;
+                margin-top: 3rem;
+            }
+
+            & .shoes-card__text {
+                font-size: 1rem;
+                top: 1rem;
+                margin: 0 1rem;
+                left: -0.7rem;
+                right: auto;
+                padding: 0;
+                position: relative;
+            }
+
+            & .shoes-card__body {
+                margin: 5.5rem 0 1.5rem;
+            }
+        }
+
+        & .shoes-card__price {
+            margin-left: -1.5rem;
+            font-size: 1rem;
+        }
+
+        & .shoes-card__text {
+            margin: 0;
+        }
+
+        & .shoes-card__body {
+            margin: 7rem 0 1.5rem;
+            font-size: 1rem;
+
+            & span {
+                min-width: 1.8rem;
+                min-height: 1.8rem;
+            }
+
+            & .shoes-card__action button {
+                height: 2.8rem;
+                width: 6.8rem;
+                font-size: 1.2rem;
+            }
         }
     }
 }

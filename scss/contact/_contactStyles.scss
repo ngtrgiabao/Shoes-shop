@@ -2,7 +2,6 @@
 @import "../animation/fly";
 
 .contact-block {
-    margin-top: 5rem;
     @include contact();
 
     & .contact {

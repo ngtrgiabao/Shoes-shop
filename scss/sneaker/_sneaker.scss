@@ -1,7 +1,6 @@
 @import "./sneakerStyles";
 
 .sneaker-block {
-    display: none !important;
     @include sneakerBlockStyles();
 
     & .shoes-news {

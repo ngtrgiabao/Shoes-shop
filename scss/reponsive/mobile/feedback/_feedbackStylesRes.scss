@@ -1,0 +1,19 @@
+@mixin feedbackBodyStylesRes {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+@mixin feedbackImgItemStylesRes {
+    img {
+        width: 22rem;
+        height: 22rem;
+    }
+
+    &:first-child {
+        margin-left: 70rem;
+    }
+}

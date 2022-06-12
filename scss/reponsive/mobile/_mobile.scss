@@ -1,7 +1,11 @@
 @media screen and (max-width: 740px) {
-    @import "../mobile/navbar2/navbar2-respon";
+    @import "../mobile/navbar2/navbar2Res";
     @import "../mobile/hotdealCard/hotdealCardRes";
-    @import "../mobile/shoesNews/shoesNews-respon";
-    @import "../mobile/contact/contact-respon";
-
+    @import "../mobile/shoesNews/shoesNewsRes";
+    @import "../mobile/bannerProduct/bannerProductRes";
+    @import "../mobile/sneaker/sneakerRes";
+    @import "../mobile/accessory/accessoryRes";
+    @import "../mobile/feedback/feedbackRes";
+    @import "../mobile/news/newsRes";
+    @import "../mobile/footer/footerRes";
 }

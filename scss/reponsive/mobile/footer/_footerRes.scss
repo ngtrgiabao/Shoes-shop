@@ -1,0 +1,19 @@
+.footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+
+    & .circles {
+        display: none;
+    }
+
+    & .footer-info {
+        & .footer-contain {
+            & .footer-title {
+                & .logo-title {
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+}

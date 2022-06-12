@@ -1,0 +1,16 @@
+.news-container {
+    & .news {
+        & .news-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(35rem, 1fr));
+
+            & .news-card:first-child {
+                margin-left: 0;
+            }
+
+            & .news-card:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

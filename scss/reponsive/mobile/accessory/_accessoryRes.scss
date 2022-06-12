@@ -1,0 +1,25 @@
+@import "./accessoryStylesRes";
+
+.accessory-block {
+    & .accessory-gallery {
+        margin-top: 0;
+        & .accessory-pic {
+            @include accessoryPicStylesRes();
+
+            & .accessory-wrapper-1 {
+                & .accessory__pic--1 {
+                    width: 30rem;
+                }
+            }
+
+            & .accessory-wrapper-2 {
+                margin-left: 0;
+                padding: 3rem;
+
+                & .accessory__pic--2 {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+    }
+}

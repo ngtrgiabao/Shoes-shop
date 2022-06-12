@@ -1,7 +1,7 @@
-@import "../effect/_effect.scss";
+@import "../../../effect/flex/_flex.scss";
 
-@mixin banner-product__Styles {
-    margin: 5rem 3rem;
+@mixin bannerProductStyleRes {
+    margin: 5rem 2rem;
     @include flex(center, center);
 
     & a {

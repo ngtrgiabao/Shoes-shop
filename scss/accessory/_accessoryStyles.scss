@@ -9,6 +9,7 @@
 @mixin accessory-gallery__Styles {
     @include flex(center, center);
     flex-direction: column;
+    margin-top: 5rem;
 }
 
 @mixin accessory-pic__Styles {
@@ -18,7 +19,7 @@
 
 @mixin accessory-wrapper-2__Styles {
     height: 100%;
-    @include flex(space-between, null);
+    @include flex(space-between, center);
     flex-direction: column;
     margin-left: 5rem;
 }

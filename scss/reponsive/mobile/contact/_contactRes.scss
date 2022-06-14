@@ -1,0 +1,27 @@
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 14rem;
+    overflow: hidden;
+
+    & .contact-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(26rem, 1fr)) !important;
+        grid-gap: 0 !important;
+        padding: 0 !important;
+
+        & .contact-item {
+            width: 23rem !important;
+            height: 11rem !important;
+
+            & i {
+                font-size: 1.8rem !important;
+            }
+
+            & p {
+                font-size: 1rem !important;
+            }
+        }
+    }
+}

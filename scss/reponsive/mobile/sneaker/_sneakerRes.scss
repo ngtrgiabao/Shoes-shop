@@ -6,7 +6,13 @@
     & .shoes-type-list {
         & .list {
             & .list-item:first-child {
-                margin-left: 114rem;
+                margin-left: 74rem;
+            }
+
+            & a {
+                width: 10rem !important;
+                height: 2.8rem !important;
+                font-size: 1.2rem;
             }
         }
     }

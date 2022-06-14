@@ -12,6 +12,7 @@
             overflow: auto;
             justify-items: center;
             padding: 0 3rem;
+            align-items: center;
 
             & .contact-item {
                 @include flex(center, center);

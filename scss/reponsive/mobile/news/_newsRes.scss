@@ -1,8 +1,27 @@
 .news-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -5rem;
+
     & .news {
         & .news-wrapper {
             display: grid;
-            grid-template-columns: repeat(3, minmax(35rem, 1fr));
+            grid-template-columns: repeat(3, minmax(28rem, 1fr));
+
+            & .news-card {
+                margin: 1rem;
+
+                & .news-card-title {
+                    font-size: 1.5rem !important;
+                }
+
+                & .news-card-info,
+                & .news-card-description {
+                    font-size: 1.2rem !important;
+                }
+            }
 
             & .news-card:first-child {
                 margin-left: 0;

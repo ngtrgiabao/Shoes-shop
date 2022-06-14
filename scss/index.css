@@ -242,6 +242,9 @@ a {
   overflow: auto;
   justify-items: center;
   padding: 0 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact-block .contact .contact-wrapper .contact-item {
@@ -2943,7 +2946,12 @@ a {
        object-fit: cover;
   }
   .sneaker-block .shoes-type-list .list .list-item:first-child {
-    margin-left: 114rem;
+    margin-left: 74rem;
+  }
+  .sneaker-block .shoes-type-list .list a {
+    width: 10rem !important;
+    height: 2.8rem !important;
+    font-size: 1.2rem;
   }
   .accessory-block .accessory-gallery {
     margin-top: 0;
@@ -2981,11 +2989,37 @@ a {
   .feedback .feedback-body .feedback-img-item:first-child {
     margin-left: 70rem;
   }
+  .news-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: -5rem;
+  }
   .news-container .news .news-wrapper {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(35rem, 1fr))[3];
-        grid-template-columns: repeat(3, minmax(35rem, 1fr));
+    -ms-grid-columns: (minmax(28rem, 1fr))[3];
+        grid-template-columns: repeat(3, minmax(28rem, 1fr));
+  }
+  .news-container .news .news-wrapper .news-card {
+    margin: 1rem;
+  }
+  .news-container .news .news-wrapper .news-card .news-card-title {
+    font-size: 1.5rem !important;
+  }
+  .news-container .news .news-wrapper .news-card .news-card-info,
+  .news-container .news .news-wrapper .news-card .news-card-description {
+    font-size: 1.2rem !important;
   }
   .news-container .news .news-wrapper .news-card:first-child {
     margin-left: 0;
@@ -2999,12 +3033,44 @@ a {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     padding: 0 2rem;
+    margin-top: 0;
   }
   .footer .circles {
     display: none;
   }
   .footer .footer-info .footer-contain .footer-title .logo-title {
     font-size: 4rem;
+  }
+  .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 14rem;
+    overflow: hidden;
+  }
+  .contact .contact-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(26rem, 1fr))[4] !important;
+        grid-template-columns: repeat(4, minmax(26rem, 1fr)) !important;
+    grid-gap: 0 !important;
+    padding: 0 !important;
+  }
+  .contact .contact-wrapper .contact-item {
+    width: 23rem !important;
+    height: 11rem !important;
+  }
+  .contact .contact-wrapper .contact-item i {
+    font-size: 1.8rem !important;
+  }
+  .contact .contact-wrapper .contact-item p {
+    font-size: 1rem !important;
   }
 }
 
@@ -3574,7 +3640,7 @@ ul {
           align-items: center;
   font-size: 2.5rem;
   text-transform: uppercase;
-  padding: 1rem 4rem;
+  padding: 1rem 2rem;
   border: 3px solid rgba(68, 49, 193, 0.822);
   position: relative;
   color: #000;

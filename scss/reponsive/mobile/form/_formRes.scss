@@ -31,6 +31,11 @@
 
         & .banner-form {
             @include bannerFormStylesRes();
+
+            & a {
+                width: 3rem;
+                height: 3rem;
+            }
         }
     }
 }

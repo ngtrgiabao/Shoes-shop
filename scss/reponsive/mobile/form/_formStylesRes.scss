@@ -1,5 +1,15 @@
 @mixin bannerFormStylesRes {
-    display: none;
+    position: absolute;
+    img {
+        display: none;
+    }
+
+    & a {
+        font-size: 1.3rem;
+        top: 4%;
+        right: -38%;
+        position: absolute;
+    }
 }
 
 @mixin socialMediaStylesRes {

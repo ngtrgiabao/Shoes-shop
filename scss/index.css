@@ -2445,7 +2445,14 @@ a {
     width: 100%;
   }
   .form-block .form-wrapper .banner-form {
+    position: absolute;
+  }
+  .form-block .form-wrapper .banner-form img {
     display: none;
+  }
+  .form-block .form-wrapper .banner-form a {
+    right: -26%;
+    position: absolute;
   }
 }
 
@@ -3109,7 +3116,20 @@ a {
     height: 4rem;
   }
   .form-block .form-wrapper .banner-form {
+    position: absolute;
+  }
+  .form-block .form-wrapper .banner-form img {
     display: none;
+  }
+  .form-block .form-wrapper .banner-form a {
+    font-size: 1.3rem;
+    top: 4%;
+    right: -38%;
+    position: absolute;
+  }
+  .form-block .form-wrapper .banner-form a {
+    width: 3rem;
+    height: 3rem;
   }
 }
 

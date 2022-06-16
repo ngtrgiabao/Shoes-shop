@@ -1,0 +1,36 @@
+@import "./formStylesRes";
+
+.form-block {
+    & .form-wrapper {
+        & .form-contain {
+            width: 100%;
+
+            & .login-form,
+            & .register-form {
+                @include formStylesRes();
+                & .social-media a {
+                    @include socialMediaStylesRes();
+                    width: 4rem;
+                    height: 4rem;
+
+                    & .google-icon {
+                        width: 2rem;
+                        height: 3rem;
+                    }
+                }
+
+                & .register-input__block,
+                & .login-input__block {
+                    & input,
+                    & button {
+                        height: 4rem;
+                    }
+                }
+            }
+        }
+
+        & .banner-form {
+            @include bannerFormStylesRes();
+        }
+    }
+}

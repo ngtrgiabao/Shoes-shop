@@ -2312,37 +2312,14 @@ a {
     font-size: 1.5rem;
     word-break: break-word;
   }
-  .container .hotdeal-card .card:hover .hotdeal-item__img img {
-    -webkit-transform: rotate(0) translateY(0);
-            transform: rotate(0) translateY(0);
-  }
   .shoes-card .card {
     height: 40rem !important;
-    margin-bottom: 2rem;
-  }
-  .shoes-card .card .shoes-card-img img {
-    -webkit-transform: rotate(-20deg) translateY(-4rem);
-            transform: rotate(-20deg) translateY(-4rem);
-  }
-  .shoes-card .card .shoes-card__text,
-  .shoes-card .card .shoes-card__price {
-    -webkit-transform: translate(0) !important;
-            transform: translate(0) !important;
-  }
-  .shoes-card .card .shoes-card__body {
-    opacity: 1 !important;
-    -webkit-transform: translateY(-3.5rem);
-            transform: translateY(-3.5rem);
   }
   .shoes-card .card .shoes-card__text {
     font-size: 1.8rem !important;
   }
   .shoes-card .card .shoes-card__price {
     font-size: 1.6rem !important;
-  }
-  .shoes-card .card .shoes-card__body {
-    -webkit-transition: none !important;
-    transition: none !important;
   }
   .shoes-card .card .shoes-card__body .shoes-card__size {
     -webkit-transition: none !important;
@@ -2463,6 +2440,12 @@ a {
   }
   .footer .footer-info .footer-contain .footer-title .logo-title {
     font-size: 3.5rem;
+  }
+  .form-block .form-wrapper .form-contain {
+    width: 100%;
+  }
+  .form-block .form-wrapper .banner-form {
+    display: none;
   }
 }
 
@@ -3071,6 +3054,62 @@ a {
   }
   .contact .contact-wrapper .contact-item p {
     font-size: 1rem !important;
+  }
+  .form-block .form-wrapper .form-contain {
+    width: 100%;
+  }
+  .form-block .form-wrapper .form-contain .login-form,
+  .form-block .form-wrapper .form-contain .register-form {
+    padding: 0;
+  }
+  .form-block .form-wrapper .form-contain .login-form input,
+  .form-block .form-wrapper .form-contain .register-form input {
+    font-size: 1rem !important;
+  }
+  .form-block .form-wrapper .form-contain .login-form .login-title,
+  .form-block .form-wrapper .form-contain .login-form .register-title,
+  .form-block .form-wrapper .form-contain .register-form .login-title,
+  .form-block .form-wrapper .form-contain .register-form .register-title {
+    font-size: 1.2rem;
+  }
+  .form-block .form-wrapper .form-contain .login-form .login-des,
+  .form-block .form-wrapper .form-contain .login-form .register-des,
+  .form-block .form-wrapper .form-contain .register-form .login-des,
+  .form-block .form-wrapper .form-contain .register-form .register-des {
+    font-size: 1rem;
+  }
+  .form-block .form-wrapper .form-contain .login-form .register-input__block button,
+  .form-block .form-wrapper .form-contain .login-form .login-input__block button,
+  .form-block .form-wrapper .form-contain .register-form .register-input__block button,
+  .form-block .form-wrapper .form-contain .register-form .login-input__block button {
+    font-size: 1.2rem;
+  }
+  .form-block .form-wrapper .form-contain .login-form .social-media a,
+  .form-block .form-wrapper .form-contain .register-form .social-media a {
+    width: 4rem;
+    height: 4rem;
+  }
+  .form-block .form-wrapper .form-contain .login-form .social-media a i,
+  .form-block .form-wrapper .form-contain .register-form .social-media a i {
+    font-size: 2rem;
+  }
+  .form-block .form-wrapper .form-contain .login-form .social-media a .google-icon,
+  .form-block .form-wrapper .form-contain .register-form .social-media a .google-icon {
+    width: 2rem;
+    height: 3rem;
+  }
+  .form-block .form-wrapper .form-contain .login-form .register-input__block input,
+  .form-block .form-wrapper .form-contain .login-form .register-input__block button,
+  .form-block .form-wrapper .form-contain .login-form .login-input__block input,
+  .form-block .form-wrapper .form-contain .login-form .login-input__block button,
+  .form-block .form-wrapper .form-contain .register-form .register-input__block input,
+  .form-block .form-wrapper .form-contain .register-form .register-input__block button,
+  .form-block .form-wrapper .form-contain .register-form .login-input__block input,
+  .form-block .form-wrapper .form-contain .register-form .login-input__block button {
+    height: 4rem;
+  }
+  .form-block .form-wrapper .banner-form {
+    display: none;
   }
 }
 

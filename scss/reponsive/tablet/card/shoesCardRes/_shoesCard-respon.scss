@@ -14,8 +14,6 @@
         }
 
         & .shoes-card__body {
-            @include shoes-card__body-Styles-res();
-
             & .shoes-card__size {
                 @include shoes-card__size-Styles-res();
                 & span {

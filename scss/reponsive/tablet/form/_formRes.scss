@@ -1,0 +1,13 @@
+@import "_formStylesRes.scss";
+
+.form-block {
+    & .form-wrapper {
+        & .form-contain {
+            width: 100%;
+        }
+
+        & .banner-form {
+            @include bannerFormStylesRes();
+        }
+    }
+}

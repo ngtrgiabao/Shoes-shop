@@ -3069,6 +3069,12 @@ a {
   .form-block .form-wrapper .form-contain .register-form {
     padding: 0;
   }
+  .form-block .form-wrapper .form-contain .login-form .login__top-title,
+  .form-block .form-wrapper .form-contain .login-form .register__top-title,
+  .form-block .form-wrapper .form-contain .register-form .login__top-title,
+  .form-block .form-wrapper .form-contain .register-form .register__top-title {
+    display: block;
+  }
   .form-block .form-wrapper .form-contain .login-form input,
   .form-block .form-wrapper .form-contain .register-form input {
     font-size: 1rem !important;
@@ -3117,6 +3123,8 @@ a {
   }
   .form-block .form-wrapper .banner-form {
     position: absolute;
+    right: 0;
+    width: 0.1%;
   }
   .form-block .form-wrapper .banner-form img {
     display: none;
@@ -3126,6 +3134,7 @@ a {
     top: 4%;
     right: -38%;
     position: absolute;
+    margin-right: 1.3rem;
   }
   .form-block .form-wrapper .banner-form a {
     width: 3rem;

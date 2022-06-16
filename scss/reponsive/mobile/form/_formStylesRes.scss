@@ -1,5 +1,7 @@
 @mixin bannerFormStylesRes {
     position: absolute;
+    right: 0;
+
     img {
         display: none;
     }
@@ -9,6 +11,7 @@
         top: 4%;
         right: -38%;
         position: absolute;
+        margin-right: 1.3rem;
     }
 }
 

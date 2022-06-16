@@ -7,6 +7,11 @@
 
             & .login-form,
             & .register-form {
+                & .login__top-title,
+                & .register__top-title {
+                    display: block;
+                }
+
                 @include formStylesRes();
                 & .social-media a {
                     @include socialMediaStylesRes();
@@ -31,6 +36,7 @@
 
         & .banner-form {
             @include bannerFormStylesRes();
+            width: 0.1%;
 
             & a {
                 width: 3rem;

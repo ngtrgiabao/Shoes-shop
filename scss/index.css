@@ -2446,13 +2446,17 @@ a {
   }
   .form-block .form-wrapper .banner-form {
     position: absolute;
+    right: 0;
+    width: 0.1%;
   }
   .form-block .form-wrapper .banner-form img {
     display: none;
   }
   .form-block .form-wrapper .banner-form a {
+    top: 3%;
     right: -26%;
     position: absolute;
+    margin-right: 1.3rem;
   }
 }
 

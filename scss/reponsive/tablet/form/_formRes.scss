@@ -8,7 +8,7 @@
 
         & .banner-form {
             @include bannerFormStylesRes();
-           
+            width: 0.1%;
         }
     }
 }

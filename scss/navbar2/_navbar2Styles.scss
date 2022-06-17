@@ -56,33 +56,6 @@
     max-height: 18rem;
 }
 
-@mixin navbarItemDetailStyles {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0 1.5rem;
-    overflow: hidden;
-    cursor: pointer;
-
-    &:first-child::after {
-        content: "";
-        left: 0.4rem;
-        bottom: -1.1rem;
-        margin: 0 0.4rem;
-        display: block;
-        background-color: rgba(0, 0, 0, 0.274);
-        position: absolute;
-    }
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-
-    &:hover {
-        background-color: #ccc;
-    }
-}
-
 @mixin navbarItemListStyles {
     &:hover {
         & .navbar-item__prop {
@@ -94,6 +67,35 @@
         content: "";
         display: block;
         position: absolute;
+    }
+}
+
+@mixin navbarItemDetailStyles {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0 1.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+
+    &:first-child::after {
+        content: "";
+        height: 1px;
+        bottom: 0;
+        left: 0.4rem;
+        margin: 0 0.4rem;
+        display: block;
+        background-color: rgba(0, 0, 0, 0.095);
+        position: absolute;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        background-color: #ccc;
     }
 }
 

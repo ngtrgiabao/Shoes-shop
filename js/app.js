@@ -24,6 +24,7 @@ const closenavbarItemProps = document.querySelector(".open-props-menu");
 const openMenu = document.querySelector(".js-left-menu");
 const navbarLeftMenu = document.querySelector(".navbar-left__menu");
 const closeMenu = document.querySelector(".exit-icon");
+const sizeScreen = window.screen.availWidth;
 
 // Open left menu
 function openLeftMenu() {
@@ -93,27 +94,33 @@ formBlocks.forEach((formBlock) => {
 
 // Show menu props
 function showPropMenu1() {
-    navbarItemList1.classList.toggle("mb-80");
-    navbarItemProp1.classList.toggle("open-props-menu");
-    navbarItemProp1.onclick = (e) => {
-        e.stopPropagation();
-    };
+    if (sizeScreen <= 1280) {
+        navbarItemList1.classList.toggle("mb-80");
+        navbarItemProp1.classList.toggle("open-props-menu");
+        navbarItemProp1.onclick = (e) => {
+            e.stopPropagation();
+        };
+    }
 }
 
 function showPropMenu2() {
-    navbarItemList2.classList.toggle("mb-80");
-    navbarItemProp2.classList.toggle("open-props-menu");
-    navbarItemProp2.onclick = (e) => {
-        e.stopPropagation();
-    };
+    if (sizeScreen <= 1280) {
+        navbarItemList2.classList.toggle("mb-80");
+        navbarItemProp2.classList.toggle("open-props-menu");
+        navbarItemProp2.onclick = (e) => {
+            e.stopPropagation();
+        };
+    }
 }
 
 function showPropMenu3() {
-    navbarItemList3.classList.toggle("mb-80");
-    navbarItemProp3.classList.toggle("open-props-menu");
-    navbarItemProp3.onclick = (e) => {
-        e.stopPropagation();
-    };
+    if (sizeScreen <= 1280) {
+        navbarItemList3.classList.toggle("mb-80");
+        navbarItemProp3.classList.toggle("open-props-menu");
+        navbarItemProp3.onclick = (e) => {
+            e.stopPropagation();
+        };
+    }
 }
 
 // Show props menu of navbar2 while click
